@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LearnSubReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a49c28a5-006a-4c92-ab05-e7ccd4501f11">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="WeMuBPMN"/>
+	<parameter name="P_MUTANTTESTITEMID" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT wumubpmn1.testresulthead.testresultheadid,
+	          wumubpmn1.testresulthead.executiontime,
+	wumubpmn1.testresulthead.mutanttestitemid,
+	wumubpmn1.testresulthead.mutationscore,
+	wumubpmn1.testresulthead.testeffectiveness,
+	wumubpmn1.testresulthead.testcasepath,
+	wumubpmn1.testresulthead.testfinish,
+	wumubpmn1.testresulthead.teststart
+FROM wumubpmn1.testresulthead
+where mutanttestitemid = $P{P_MUTANTTESTITEMID}]]>
+	</queryString>
+	<field name="testresultheadid" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="testresultheadid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="executiontime" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="executiontime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="mutanttestitemid" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="mutanttestitemid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="mutationscore" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="mutationscore"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="testeffectiveness" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="testeffectiveness"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="testcasepath" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="testcasepath"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="testfinish" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="testfinish"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="teststart" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="teststart"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

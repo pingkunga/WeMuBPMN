@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LearnSubReport2" pageWidth="595" pageHeight="420" orientation="Landscape" whenNoDataType="NoPages" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="86b19c3c-b613-4709-bc4f-0b84f1e9cf52">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="WeMuBPMN"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="mutantTestItemDetail" uuid="5a957ed6-dcf9-4083-b9b9-9b5f1586472b">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="WeMuBPMN"/>
+		<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="237"/>
+		<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="752"/>
+		<parameter name="SP_TESTRESULTIDTOTABLE" class="java.lang.Integer">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+			<defaultValueExpression><![CDATA[52]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[select tresult.mutationoperator
+	 , sum(case when (RAWTOTALKILL > 0) then 1 else 0 end) as TOTALKILL
+     , sum(case when ((RAWTOTALLIVE >= 0) and (RAWTOTALKILL = 0)) then 1 else 0 end) as TOTALLIVE
+from(
+select mutationoperator
+     , mutantname
+     , sum(case result when 'KILLED' then 1 else 0 end) as RAWTOTALKILL
+     , sum(case result when 'LIVE' then 1 else 0 end) as RAWTOTALLIVE
+from testresultdetail 
+where testresultheadid =  $P{SP_TESTRESULTIDTOTABLE}
+group by mutationoperator, mutantname
+) as tresult
+group by mutationoperator]]>
+		</queryString>
+		<field name="mutationoperator" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="mutationoperator"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="testresultdetail"/>
+		</field>
+		<field name="TOTALKILL" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.label" value="TOTALKILL"/>
+		</field>
+		<field name="TOTALLIVE" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.label" value="TOTALLIVE"/>
+		</field>
+		<variable name="SUM_TOTALKILL" class="java.lang.Integer" calculation="Sum">
+			<variableExpression><![CDATA[$F{TOTALKILL}]]></variableExpression>
+		</variable>
+		<variable name="SUM_TOTALLIVE" class="java.lang.Integer" calculation="Sum">
+			<variableExpression><![CDATA[$F{TOTALLIVE}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="SP_TESTRESULTID" class="java.lang.Integer">
+		<parameterDescription><![CDATA[SP_TESTRESULTID]]></parameterDescription>
+	</parameter>
+	<parameter name="SP_TESTCOUNT" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT wumubpmn1.testresulthead.teststart,
+	wumubpmn1.testresulthead.testfinish,
+	wumubpmn1.testresulthead.testeffectiveness,
+	wumubpmn1.testresulthead.testcasepath,
+	wumubpmn1.testresulthead.mutationscore,
+	wumubpmn1.testresulthead.mutanttestitemid,
+	wumubpmn1.testresulthead.executiontime,
+	wumubpmn1.testresulthead.testresultheadid
+FROM wumubpmn1.testresulthead
+WHERE 
+	 wumubpmn1.testresulthead.testresultheadid = $P{SP_TESTRESULTID}]]>
+	</queryString>
+	<field name="teststart" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="teststart"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="testfinish" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="testfinish"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="testeffectiveness" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="testeffectiveness"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="testcasepath" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="testcasepath"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="mutationscore" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="mutationscore"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="mutanttestitemid" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="mutanttestitemid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="executiontime" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="executiontime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="testresultheadid" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="testresultheadid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="544" height="30" uuid="57eb16e9-0dae-4077-b57c-a9cf48f8f3da"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ผลการทดสอบแบบจำลองครั้งที่ " + $P{SP_TESTCOUNT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="31" width="60" height="30" uuid="0f949535-29b2-4832-bf27-4b26213c9155"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+				</textElement>
+				<text><![CDATA[  เวลาเริ่มต้น]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="31" width="140" height="30" uuid="3d52af74-0784-4be0-99a5-6d81dcd16156"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS").format( $F{teststart})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="220" y="31" width="60" height="30" uuid="dabba997-c618-4042-bb90-038071f006a9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+				</textElement>
+				<text><![CDATA[  เวลาสิ้นสุด]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="31" width="160" height="30" uuid="f6ce3aa0-747e-4de0-a59e-49234141a4c7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS").format( $F{testfinish})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="440" y="31" width="50" height="30" uuid="a34a1edf-945d-4fb6-86cb-7bc759bf1e64"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+				</textElement>
+				<text><![CDATA[  เวลาที่ใช้]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="490" y="31" width="60" height="30" uuid="027204ae-6508-4157-b3ce-2b8063e948d5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{executiontime} + " วินาที"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="232" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="207" height="220" uuid="56ed0ec0-3006-4dc4-94e6-cff1907ef3e4">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="mutantTestItemDetail" uuid="af78fac6-3c39-4532-aad9-1d3cb4c67773">
+						<datasetParameter name="SP_TESTRESULTIDTOTABLE">
+							<datasetParameterExpression><![CDATA[$P{SP_TESTRESULTID}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="110" uuid="bb0a3faa-7f7c-48c6-82f5-c02dc195416d">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="dbe4496c-2d2b-4eb0-b000-b6314308590f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="16" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ตัวดำเนินการมิวเทชัน]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="2a6dee31-0fcf-481e-a913-68dfbdb0c4d0"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+								</textElement>
+								<text><![CDATA[จำนวนทั้งหมด  ]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="be1f2698-de9d-47af-b555-7312c2409b57"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{mutationoperator}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="47" uuid="59e6f32b-70be-435d-93a8-25ef02189e51">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="47" height="30" uuid="1f08fb7c-3c48-43cc-bd21-9b5771a93d88"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="16" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ถูกฆ่า]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="47" height="30" uuid="3b259f24-e05c-45af-a59d-30b21f98ac28"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{SUM_TOTALKILL}]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="47" height="30" uuid="5dd633e3-3dba-41c8-b025-bce94191b5f6"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{TOTALKILL}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="190a3b87-86b9-4ff1-b367-36bc6bfcba1d">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="24810173-1963-476a-86f4-cfebb841655d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="16" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ที่ยังมีชีวิต]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="fd5cca37-d46b-4fa5-bda0-0a644f6478b8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{SUM_TOTALLIVE}]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="6a756343-6aa5-436d-9584-54e4ff43cdb2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{TOTALLIVE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<barChart>
+				<chart isShowLegend="true" evaluationTime="Report">
+					<reportElement x="220" y="0" width="330" height="220" uuid="064a5001-db68-448f-b26b-496ef377a320"/>
+					<chartTitle>
+						<font fontName="WumunBPMNTHSarabunNew" size="13" isBold="true"/>
+						<titleExpression><![CDATA["กราฟแสดงจำนวนมิวแตนท์ที่ถูกฆ่า เทียบกับที่ยังมีชีวิต แยกตามตัวดำเนินการมิวเทชัน"]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend>
+						<font fontName="WumunBPMNTHSarabunNew" size="14" isBold="true"/>
+					</chartLegend>
+				</chart>
+				<categoryDataset>
+					<dataset>
+						<datasetRun subDataset="mutantTestItemDetail" uuid="2de3b2ec-deab-4523-8d1d-b8350116ad20">
+							<datasetParameter name="SP_TESTRESULTIDTOTABLE">
+								<datasetParameterExpression><![CDATA[$P{SP_TESTRESULTID}]]></datasetParameterExpression>
+							</datasetParameter>
+						</datasetRun>
+					</dataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["ถูกฆ่า"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{mutationoperator}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{TOTALKILL}]]></valueExpression>
+						<labelExpression><![CDATA["ถูกฆ่า"]]></labelExpression>
+					</categorySeries>
+					<categorySeries>
+						<seriesExpression><![CDATA["ยังมีชีวิต"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{mutationoperator}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{TOTALLIVE}]]></valueExpression>
+						<labelExpression><![CDATA["ยังมืชีวิต"]]></labelExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</detail>
+	<summary>
+		<band height="32">
+			<staticText>
+				<reportElement x="0" y="0" width="150" height="30" uuid="61635c72-9301-47f9-b8af-1b7a683b0a69"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+				</textElement>
+				<text><![CDATA[  คะแนนมิวเทชัน]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="0" width="120" height="30" uuid="ecf7ffb7-1985-42f1-a534-2c5300172071"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mutationscore}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="0" width="150" height="30" uuid="aa2cee7b-18da-4b65-b2b3-ef1a0f1163ff"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+				</textElement>
+				<text><![CDATA[  ประสิทธิภาพของการทดสอบ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="440" y="0" width="120" height="30" uuid="dc863a74-b325-45fd-b431-b6059b1bc58f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{testeffectiveness}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

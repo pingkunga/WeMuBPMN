@@ -1,0 +1,680 @@
+<?xml version="1.0"?>
+	<?mso-application progid="Excel.Sheet"?> 
+	<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" 
+	xmlns:o="urn:schemas-microsoft-com:office:office" 
+	xmlns:x="urn:schemas-microsoft-com:office:excel" 
+	xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" 
+	xmlns:html="http://www.w3.org/TR/REC-html40"> 
+	<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office"> 
+	<Version>12.00</Version> 
+	</DocumentProperties> 
+	<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel"> 
+	<WindowHeight>8130</WindowHeight> 
+	<WindowWidth>15135</WindowWidth> 
+	<WindowTopX>120</WindowTopX> 
+	<WindowTopY>45</WindowTopY> 
+	<ProtectStructure>False</ProtectStructure> 
+	<ProtectWindows>False</ProtectWindows> 
+	</ExcelWorkbook> 
+	<Styles>
+		<Style ss:ID="xls-style-1" ss:Name="xls-style-1">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Center"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#333333" />
+			<Interior ss:Color="#ffffff" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-2" ss:Name="xls-style-2">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#333333" />
+			<Interior ss:Color="#ffffff" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-3" ss:Name="xls-style-3">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#333333" />
+			<Interior ss:Color="#ffffff" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-4" ss:Name="xls-style-4">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#333333" />
+			<Interior ss:Color="#ffffff" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-5" ss:Name="xls-style-5">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Center"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+			</Borders>
+			<Font ss:Color="#FFFFFF" />
+			<Interior ss:Color="#356AA0" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-6" ss:Name="xls-style-6">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+			</Borders>
+			<Font ss:Color="#FFFFFF" />
+			<Interior ss:Color="#356AA0" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-7" ss:Name="xls-style-7">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+			</Borders>
+			<Font ss:Color="#FFFFFF" />
+			<Interior ss:Color="#356AA0" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-8" ss:Name="xls-style-8">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+			</Borders>
+			<Font ss:Color="#FFFFFF" />
+			<Interior ss:Color="#356AA0" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-9" ss:Name="xls-style-9">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+			</Borders>
+			<Font ss:Color="#FFFFFF" />
+			<Interior ss:Color="#356AA0" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-10" ss:Name="xls-style-10">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Center"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+			</Borders>
+			<Font ss:Color="#FFFFFF" />
+			<Interior ss:Color="#356AA0" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-11" ss:Name="xls-style-11">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#316293"/>
+			</Borders>
+			<Font ss:Color="#FFFFFF" />
+			<Interior ss:Color="#356AA0" ss:Pattern="Solid"/>
+		</Style>
+	</Styles>
+	<Worksheet ss:Name="Sheet1">
+		<Table>
+			<Column ss:Width="25"/>
+			<Column ss:Width="25"/>
+			<Column ss:Width="70"/>
+			<Column ss:Width="250"/>
+			<Column ss:Width="400"/>
+			<Column ss:Width="400"/>
+			<Row>
+				<Cell ss:MergeAcross="2" ss:StyleID="xls-style-1"><Data ss:Type="String">Operator</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Mutant Id</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="String">Original</Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String">Mutant</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">+</Data></Cell>
+				<Cell ss:MergeAcross="1" ss:StyleID="xls-style-6"><Data ss:Type="String">IVR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">-</Data></Cell>
+				<Cell ss:MergeAcross="1" ss:StyleID="xls-style-6"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${FUNDNAME == &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${FUNDAMOUNT == &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${Income == &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${Summary == &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${GPFAMT == &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${INSLIFEAMT == &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${TEACHERAMT == &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${Name == &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ FUNDNAME + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ Name + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_11</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ FUNDNAME + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_12</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ Name + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_13</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + FUNDNAME + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_14</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + Name + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_15</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + FUNDNAME + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_16</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + Name + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_17</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + FUNDNAME &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_18</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + Name &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_19</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + FUNDNAME &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ITR_20</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + Name &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">-</Data></Cell>
+				<Cell ss:MergeAcross="1" ss:StyleID="xls-style-6"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ERR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${Retry &lt; &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ERR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${Retry &lt;= &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ERR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${Retry &gt; &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ERR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${Retry &gt;= &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ERR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${Retry == &apos;NO&apos;}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${Retry != &apos;NO&apos;}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">-</Data></Cell>
+				<Cell ss:MergeAcross="1" ss:StyleID="xls-style-6"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT- GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT* GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT/ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT% GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT - INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT * INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT / INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT % INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT - TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT * TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_11</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT / TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_12</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT % TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_13</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT- GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_14</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT* GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_15</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT/ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_16</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT% GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_17</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT - INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_18</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT * INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_19</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT / INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_20</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT % INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_21</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT - TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_22</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT * TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_23</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT / TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">AAS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_AAS_24</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT % TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">-</Data></Cell>
+				<Cell ss:MergeAcross="1" ss:StyleID="xls-style-6"><Data ss:Type="String">ARS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ARS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ARS_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt; 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ARS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ARS_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &gt; 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ARS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ARS_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &gt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ARS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ARS_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT == 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ARS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ARS_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT != 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ARS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ARS_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt; 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ARS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ARS_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &gt; 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ARS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ARS_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &gt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ARS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ARS_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT == 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ARS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ARS_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT != 15PERINCOME)}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">-</Data></Cell>
+				<Cell ss:MergeAcross="1" ss:StyleID="xls-style-6"><Data ss:Type="String">ALS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ALS</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">RMFCalculation_ALS_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) &amp;&amp; (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 500,000) || (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT &lt;= 15PERINCOME)}</Data></Cell>
+			</Row>
+		</Table>
+	</Worksheet>
+</Workbook>

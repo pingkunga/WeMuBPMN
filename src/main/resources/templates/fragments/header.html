@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head lang="en" th:fragment="header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" href="../../static/css/bootstrap.min.css"  media="screen"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}" href="../../static/css/main.css"  media="screen"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/libJQWidget/jqx.base.css}" href="../../static/css/libJQWidget/jqx.base.css"  media="screen"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/libJQWidget/jqx.arctic.css}" href="../../static/css/libJQWidget/jqx.arctic.css"  media="screen"/>
+    <script type="text/javascript" th:src="@{/js/lib/jquery.js}" src="../../js/lib/jquery.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/bootstrap.min.js}" src="../../js/lib/bootstrap.min.js"></script> 
+    <script type="text/javascript" th:src="@{/js/lib/bootstrap.min.js}" src="../../js/lib/bootstrap.min.js"></script> 
+    
+
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    
+    <script type="text/javascript" th:src="@{/js/lib/bootstrap-waitingfor.js}" src="../../js/lib/bootstrap-waitingfor.js"></script> 
+    <script type="text/javascript" th:src="@{/js/lib/jqxcore.js}" src="../../js/lib/jqxcore.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxdata.js}" src="../../js/lib/jqxdata.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxbuttons.js}" src="../../js/lib/jqxbuttons.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxscrollbar.js}" src="../../js/lib/jqxscrollbar.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxdatatable.js}" src="../../js/lib/jqxdatatable.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxtreegrid.js}" src="../../js/lib/jqxtreegrid.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxgrid.js}" src="../../js/lib/jqxgrid.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxgrid.sort.js}" src="../../js/lib/jqxgrid.sort.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxgrid.pager.js}" src="../../js/lib/jqxgrid.pager.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxgrid.selection.js}" src="../../js/lib/jqxgrid.selection.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxgrid.edit.js}" src="../../js/lib/jqxgrid.edit.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxgrid.columnsresize.js}" src="../../js/lib/jqxgrid.columnsresize.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxcheckbox.js}" src="../../js/lib/jqxcheckbox.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxlistbox.js}" src="../../js/lib/jqxlistbox.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxdata.export.js}" src="../../js/lib/jqxdata.export.js" ></script>
+    <script type="text/javascript" th:src="@{/js/lib/jqxgrid.export.js}" src="../../js/lib/jqxgrid.export.js" ></script>
+
+    <!-- <script type="text/javascript" th:src="@{/js/generateMutant.js}" src="../../js/generateMutant.js"></script> 
+    <script type="text/javascript" th:src="@{/js/executeTest.js}" src="../../js/executeTest.js"></script>  -->
+</head>
+
+<body>
+    <div class="container">
+            <div th:fragment="header">
+                <nav class="navbar navbar-light bg-light navbar-expand-md"> <a class="navbar-brand" href="#" th:href="@{/}">Home</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a href="#" th:href="@{/engineconfig}" class="nav-link">BPMN Engine Config</a>
+                        </li>
+                        <li class="nav-item"><a href="#" th:href="@{/testitems}" class="nav-link">Test Item List</a>
+                        </li>
+                        <li class="nav-item"><a href="#" th:href="@{/generatemutants}" class="nav-link">Generate Mutant</a>
+                        </li>
+                        <li class="nav-item"><a href="#" th:href="@{/testExecution}" class="nav-link">Execute Test</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+      layout:decorator="layouts/mainLayout">
+            
+<head>
+    <title>Layout</title>
+</head>
+<body>
+    <div layout:fragment="content">
+        <h2>Test Item List</h2>
+        <div class="form-group">
+            <button class="btn btn-default" onclick="window.location.href = '/testitem/new';">Create test item</button>
+        </div>
+        <div th:if="${not #lists.isEmpty(testitems)}">
+            
+            <table class="table table-striped">
+                <tr>
+                    <th>Id</th>
+                    <th>Test Item Name</th>
+                    <th>Test Item Path</th>
+                    <th>View</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                <tr th:each="testitem : ${testitems}">
+                    <td th:text="${testitem.testItemId}"><a href="/testitem/${testitem.testItemId}">Id</a></td>
+                    <td th:text="${testitem.testItemName}">Test Item Name</td>
+                    <td th:text="${testitem.testItemPath}">Test Item Path</td>
+                    <td><a th:href="${'/testitem/' + testitem.testItemId}">View</a></td>
+                    <td><a th:href="${'/testitem/edit/' + testitem.testItemId}">Edit</a></td>
+                    <td><a th:href="${'/testitem/delete/' + testitem.testItemId}">Delete</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

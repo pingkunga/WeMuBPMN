@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Camunda Modeler" exporterVersion="1.11.3" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="RMFCalculation_AAS_5" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_1ntv6f1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1ntv6f1" sourceRef="StartEvent_1" targetRef="Task_0dpsufh"/>
+    <bpmn:userTask id="Task_0ryknop" name="Select RMF Fund">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="FUNDNAME" label="FUNDNAME" type="string"/>
+          <camunda:formField id="FUNDAMOUNT" label="FUNDAMOUNT" type="long"/>
+        </camunda:formData>
+        <camunda:executionListener event="end">
+          <camunda:script scriptFormat="groovy"><![CDATA[RMFAMT = execution.gettVariable ("RMFAMT");
+
+if (RMFAMT == null)
+{
+   RMFAMT  = 0;
+}
+else
+{
+   RMFAMT  = RMFAMT  + FUNDAMOUNT;
+}
+
+ execution.settVariable ("RMFAMT",RMFAMT );]]></camunda:script>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0370g0y</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1irmjp6</bpmn:outgoing>
+      <bpmn:standardLoopCharacteristics loopMaximum="5" testBefore="true">
+        <bpmn:loopCondition xsi:type="bpmn:tFormalExpression"><![CDATA[${(RMFAMT+ GPFAMT - INSLIFEAMT + TEACHERAMT <= 500,000) && (RMFAMT+ GPFAMT + INSLIFEAMT + TEACHERAMT <= 15PERINCOME)}]]></bpmn:loopCondition>
+      </bpmn:standardLoopCharacteristics>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0gjqott" sourceRef="Task_0dpsufh" targetRef="Task_14hjpfv"/>
+    <bpmn:userTask id="Task_0dpsufh" name="Input Personal Info">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Name" label="Name" type="string"/>
+          <camunda:formField id="Income" label="Income" type="long"/>
+          <camunda:formField id="GPFAMT" label="GPF Amount" type="long"/>
+          <camunda:formField id="INSLIFEAMT" label="Insurance Amount" type="long"/>
+          <camunda:formField id="TEACHERAMT" label="Teacher Fund Amount" type="long"/>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1ntv6f1</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0gjqott</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_0p7qqxn" name="List RMF Fund">
+      <bpmn:incoming>SequenceFlow_1r4s8np</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0370g0y</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_0udr8i0" name="Print Report">
+      <bpmn:incoming>SequenceFlow_11utp19</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1x9qtse</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Task_0cz4wof" name="Summary RMF Fund">
+      <bpmn:documentation><![CDATA[ไม่เกิน 15% ของรายได้ที่ต้องเสียภาษีต่อปี และต้องไม่เกิน 500,000 บาท
+เมื่อรวมกับกองทุนสำรองเลี้ยงชีพ กบข. ประกันชีวิตแบบบำนาญ และกองทุนสงเคราะห์ครูโรงเรียนเอกชน]]></bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Summary" label="Summary" type="string"/>
+          <camunda:formField id="Retry" label="Retry" type="enum">
+            <camunda:value id="YES" name="YES"/>
+            <camunda:value id="NO" name="NO"/>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1irmjp6</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0pbps33</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_15upvrj">
+      <bpmn:incoming>SequenceFlow_0pbps33</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_11utp19</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1px8xw5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0370g0y" sourceRef="Task_0p7qqxn" targetRef="Task_0ryknop"/>
+    <bpmn:sequenceFlow id="SequenceFlow_1irmjp6" sourceRef="Task_0ryknop" targetRef="Task_0cz4wof"/>
+    <bpmn:sequenceFlow id="SequenceFlow_0pbps33" sourceRef="Task_0cz4wof" targetRef="ExclusiveGateway_15upvrj"/>
+    <bpmn:sequenceFlow id="SequenceFlow_11utp19" name="Print" sourceRef="ExclusiveGateway_15upvrj" targetRef="Task_0udr8i0">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${Retry == 'NO'}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:intermediateThrowEvent id="IntermediateThrowEvent_0zmya5s">
+      <bpmn:incoming>SequenceFlow_1x9qtse</bpmn:incoming>
+    </bpmn:intermediateThrowEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1x9qtse" sourceRef="Task_0udr8i0" targetRef="IntermediateThrowEvent_0zmya5s"/>
+    <bpmn:serviceTask id="Task_14hjpfv" name="Calc Tax Base">
+      <bpmn:incoming>SequenceFlow_0gjqott</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1r4s8np</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1r4s8np" sourceRef="Task_14hjpfv" targetRef="Task_0p7qqxn"/>
+    <bpmn:intermediateThrowEvent id="IntermediateThrowEvent_12ba8gh">
+      <bpmn:incoming>SequenceFlow_1px8xw5</bpmn:incoming>
+    </bpmn:intermediateThrowEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1px8xw5" sourceRef="ExclusiveGateway_15upvrj" targetRef="IntermediateThrowEvent_12ba8gh"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane bpmnElement="Process_1" id="BPMNPlane_1">
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="_BPMNShape_StartEvent_2">
+        <dc:Bounds height="36" width="36" x="76" y="113"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="20" width="90" x="49" y="149"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1ntv6f1" id="SequenceFlow_1ntv6f1_di">
+        <di:waypoint x="112" xsi:type="dc:Point" y="131"/>
+        <di:waypoint x="142" xsi:type="dc:Point" y="131"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="82" y="110"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="Task_0ryknop" id="Task_0ryknop_di">
+        <dc:Bounds height="80" width="100" x="556.813" y="90.90699999999998"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0gjqott" id="SequenceFlow_0gjqott_di">
+        <di:waypoint x="242" xsi:type="dc:Point" y="131"/>
+        <di:waypoint x="278" xsi:type="dc:Point" y="131"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="215" y="110"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="Task_0dpsufh" id="UserTask_1vohcjp_di">
+        <dc:Bounds height="80" width="100" x="142" y="91"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_0p7qqxn" id="ServiceTask_1ig6c8v_di">
+        <dc:Bounds height="80" width="100" x="425" y="91"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_0udr8i0" id="ServiceTask_03y1cwg_di">
+        <dc:Bounds height="80" width="100" x="921" y="91"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_0cz4wof" id="UserTask_0se1hgi_di">
+        <dc:Bounds height="80" width="100" x="689" y="91"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="ExclusiveGateway_15upvrj" id="ExclusiveGateway_15upvrj_di" isMarkerVisible="true">
+        <dc:Bounds height="50" width="50" x="824" y="106"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="804" y="160"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0370g0y" id="SequenceFlow_0370g0y_di">
+        <di:waypoint x="525" xsi:type="dc:Point" y="131"/>
+        <di:waypoint x="557" xsi:type="dc:Point" y="131"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="496" y="110"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1irmjp6" id="SequenceFlow_1irmjp6_di">
+        <di:waypoint x="657" xsi:type="dc:Point" y="131"/>
+        <di:waypoint x="689" xsi:type="dc:Point" y="131"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="628" y="110"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0pbps33" id="SequenceFlow_0pbps33_di">
+        <di:waypoint x="789" xsi:type="dc:Point" y="131"/>
+        <di:waypoint x="824" xsi:type="dc:Point" y="131"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="761.5" y="110"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_11utp19" id="SequenceFlow_11utp19_di">
+        <di:waypoint x="874" xsi:type="dc:Point" y="131"/>
+        <di:waypoint x="921" xsi:type="dc:Point" y="131"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="23" x="877.9756097560975" y="114"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="IntermediateThrowEvent_0zmya5s" id="IntermediateThrowEvent_0zmya5s_di">
+        <dc:Bounds height="36" width="36" x="1058" y="113"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="1031" y="153"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1x9qtse" id="SequenceFlow_1x9qtse_di">
+        <di:waypoint x="1021" xsi:type="dc:Point" y="131"/>
+        <di:waypoint x="1058" xsi:type="dc:Point" y="131"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="994.5" y="110"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="Task_14hjpfv" id="ServiceTask_1cd78lp_di">
+        <dc:Bounds height="80" width="100" x="278" y="91"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1r4s8np" id="SequenceFlow_1r4s8np_di">
+        <di:waypoint x="378" xsi:type="dc:Point" y="131"/>
+        <di:waypoint x="425" xsi:type="dc:Point" y="131"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="0" x="401.5" y="110"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="IntermediateThrowEvent_12ba8gh" id="IntermediateThrowEvent_12ba8gh_di">
+        <dc:Bounds height="36" width="36" x="1058" y="207"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="0" x="1076" y="247"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1px8xw5" id="SequenceFlow_1px8xw5_di">
+        <di:waypoint x="849" xsi:type="dc:Point" y="156"/>
+        <di:waypoint x="849" xsi:type="dc:Point" y="225"/>
+        <di:waypoint x="1058" xsi:type="dc:Point" y="225"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="0" x="864" y="184.5"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

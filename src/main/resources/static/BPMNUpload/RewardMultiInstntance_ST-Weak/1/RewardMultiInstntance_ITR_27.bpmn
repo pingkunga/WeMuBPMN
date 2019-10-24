@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Camunda Modeler" exporterVersion="1.11.3" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:collaboration id="Collaboration_1ukzxwm">
+    <bpmn:participant id="Participant_1jytf7q" name="Reward Process" processRef="RewardMultiInstanceAssignee"/>
+  </bpmn:collaboration>
+  <bpmn:process id="RewardMultiInstntance_ITR_27" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0r1co7i" name="Manager">
+        <bpmn:flowNodeRef>Task_0o9iylr</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_111ifpl</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1mu7bj0</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1uzfnxh</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1l0vjpp</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_0p0dthr</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>ExclusiveGateway_1cfwqqd</bpmn:flowNodeRef>
+        <bpmn:childLaneSet xsi:type="bpmn:tLaneSet"/>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0feow9m" name="Reward Commitee">
+        <bpmn:flowNodeRef>Task_0ofwv70</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EvaluateProcess</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:sequenceFlow id="SequenceFlow_1nhdcp1" sourceRef="StartEvent_1" targetRef="Task_1l0vjpp"/>
+    <bpmn:sequenceFlow id="SequenceFlow_0y00p8b" sourceRef="Task_1l0vjpp" targetRef="Task_0p0dthr"/>
+    <bpmn:sequenceFlow id="SequenceFlow_0azgsh3" sourceRef="Task_0p0dthr" targetRef="EvaluateProcess"/>
+    <bpmn:sequenceFlow id="SequenceFlow_0bslxhz" sourceRef="Task_0ofwv70" targetRef="ExclusiveGateway_1cfwqqd"/>
+    <bpmn:sequenceFlow id="SequenceFlow_125qqc9" name="Rejected" sourceRef="ExclusiveGateway_1cfwqqd" targetRef="Task_1uzfnxh">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${NumOfApprove < RequiredNumOfApproval}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_0qvflnw" sourceRef="Task_1uzfnxh" targetRef="EndEvent_1mu7bj0"/>
+    <bpmn:sequenceFlow id="SequenceFlow_06tfs2q" name="Approved" sourceRef="ExclusiveGateway_1cfwqqd" targetRef="Task_0o9iylr">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${NumOfApprove >= RequiredNumOfApproval}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_04bpp14" sourceRef="Task_0o9iylr" targetRef="EndEvent_111ifpl"/>
+    <bpmn:userTask camunda:assignee="mary" id="Task_0o9iylr" name="Note Personnel File Appproved">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="RequestNo" label="RequestNo" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="EmployeeId" label="EmployeeId" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="EmployeeName" label="EmployeeName" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="Position" label="Position" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="No1Workmanship" label="No1Workmanship" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="No2Workmanship" label="No2Workmanship" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="No3Workmanship" label="No3Workmanship" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField defaultValue="10000" id="RewardAmount" label="RewardAmount" type="long">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField defaultValue="Approved" id="RewardStatus" label="RewardStatus" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_06tfs2q</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_04bpp14</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="EndEvent_111ifpl" name="End Approved">
+      <bpmn:incoming>SequenceFlow_04bpp14</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="EndEvent_1mu7bj0" name="End Reject">
+      <bpmn:incoming>SequenceFlow_0qvflnw</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask camunda:assignee="mary" id="Task_1uzfnxh" name="Note Personnel File Rejected">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="RequestNo" label="RequestNo" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="EmployeeId" label="EmployeeId" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="EmployeeName" label="EmployeeName" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="Position" label="Position" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="No1Workmanship" label="No1Workmanship" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="No2Workmanship" label="No2Workmanship" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="No3Workmanship" label="No3Workmanship" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField defaultValue="10000" id="RewardAmount" label="RewardAmount" type="long">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField defaultValue="Rejected" id="RewardStatus" label="RewardStatus" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_125qqc9</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0qvflnw</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1a0h9gg" sourceRef="EvaluateProcess" targetRef="Task_0ofwv70"/>
+    <bpmn:startEvent id="StartEvent_1" name="Enter Employee who shall receive Reward">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField defaultValue="-" id="RequestNo" label="RequestNo" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="EmployeeId" label="EmployeeId" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="required"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="EmployeeName" label="EmployeeName" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="required"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="Position" label="Position" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="required"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="No1Workmanship" label="No1Workmanship" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="required"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField defaultValue="-" id="No2Workmanship" label="No2Workmanship" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="required"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField defaultValue="-" id="No3Workmanship" label="No3Workmanship" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="required"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField defaultValue="10000" id="RewardAmount" label="RewardAmount" type="long"/>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:outgoing>SequenceFlow_1nhdcp1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask camunda:assignee="mary" id="Task_1l0vjpp" name="Associate Reviews">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="RequestNo" label="RequestNo" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="EmployeeId" label="ReviewEmployeeId" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="EmployeeName" label="ReviewEmployeeName" type="string">
+            <camunda:validation>
+              <camunda:constraint config="true" name="readonly"/>
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField defaultValue="3" id="RequiredNumOfPeers" label="RequiredNumOfPeers" type="long"/>
+          <camunda:formField defaultValue="2" id="RequiredMinNumofPeer" label="RequiredMinNumofPeer" type="long"/>
+          <camunda:formField defaultValue="2" id="RequiredNumOfApproval" label="RequiredNumOfApproval" type="long"/>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1nhdcp1</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0y00p8b</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:scriptTask id="Task_0p0dthr" name="Setup Reviews" scriptFormat="groovy">
+      <bpmn:incoming>SequenceFlow_0y00p8b</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0azgsh3</bpmn:outgoing>
+      <bpmn:script><![CDATA[//create a collection to hold our multi-instance results.
+def committee = [ 'jame', 'john', 'peter'];
+//Create MAP 
+def reviewResultMap = [:];
+
+for (i = 0; i <RequiredNumOfPeers; i++) {
+    reviewResultMap.put(committee[i], "NOT_REVIEW");
+}
+
+execution.setVariable ("reviewResultMap", reviewResultMap);
+
+RequestNo= execution.getProcessInstanceId();
+execution.setVariable ("RequestNo", RequestNo);]]></bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Task_0ofwv70" name="Calulate results" scriptFormat="groovy">
+      <bpmn:incoming>SequenceFlow_1a0h9gg</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0bslxhz</bpmn:outgoing>
+      <bpmn:script><![CDATA[/*นับจำนวนคนที่ Approved พนักงาน */
+
+//เอา Review Result ของแต่ละคนออกมา
+
+//นับผลลัพธ์
+int numofApprove = 0;
+for (review in reviewResultMap) {
+   out:println "review result:" + review.key + "--" + review.value;
+   if(review.value =="APPROVE")
+   {
+       numofApprove += 1;
+   }
+}
+
+execution.setVariable ("NumOfApprove", numofApprove);]]></bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_1cfwqqd" name="Is Appoved Award">
+      <bpmn:incoming>SequenceFlow_0bslxhz</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_06tfs2q</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_125qqc9</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:subProcess id="EvaluateProcess" name="Evaluate Process">
+      <bpmn:documentation><![CDATA[
+]]></bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:executionListener event="start">
+          <camunda:script scriptFormat="groovy"><![CDATA[execution.setVariable("reviewer", theCommitee,"EvaluateProcess");
+execution.setVariable("reviewResult", "NOT_REVIEW","EvaluateProcess");
+
+
+]]></camunda:script>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0azgsh3</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1a0h9gg</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics camunda:collection="${reviewResultMap.keySet()}" camunda:elementVariable="theCommitee">
+        <bpmn:loopCardinality xsi:type="bpmn:tFormalExpression">${RequiredNumOfPeers}</bpmn:loopCardinality>
+        <bpmn:completionCondition xsi:type="bpmn:tFormalExpression"><![CDATA[${(nrOfCompletedInstances >= RequiredMinNumofPeer) && (reviewerMap.size() == nrOfInstances)}]]></bpmn:completionCondition>
+      </bpmn:multiInstanceLoopCharacteristics>
+      <bpmn:startEvent id="StartEvent_04zeqi7">
+        <bpmn:outgoing>SequenceFlow_1es6rsf</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:endEvent id="EndEvent_0ov7unr">
+        <bpmn:incoming>SequenceFlow_0r400ep</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:sequenceFlow id="SequenceFlow_1es6rsf" sourceRef="StartEvent_04zeqi7" targetRef="Task_0eroej3"/>
+      <bpmn:sequenceFlow id="SequenceFlow_1cbnqvg" sourceRef="Task_0eroej3" targetRef="Task_07hvbtg"/>
+      <bpmn:userTask camunda:assignee="${theCommitee}" id="Task_0eroej3" name="Evaluate Award">
+        <bpmn:documentation>Group RewardCommitee</bpmn:documentation>
+        <bpmn:extensionElements>
+          <camunda:formData>
+            <camunda:formField id="RequestNo" label="RequestNo" type="string">
+              <camunda:validation>
+                <camunda:constraint config="true" name="readonly"/>
+              </camunda:validation>
+            </camunda:formField>
+            <camunda:formField id="EmployeeId" label="EmployeeId" type="string">
+              <camunda:validation>
+                <camunda:constraint config="true" name="readonly"/>
+              </camunda:validation>
+            </camunda:formField>
+            <camunda:formField id="EmployeeName" label="EmployeeName" type="string">
+              <camunda:validation>
+                <camunda:constraint config="true" name="readonly"/>
+              </camunda:validation>
+            </camunda:formField>
+            <camunda:formField id="Position" label="Position" type="string">
+              <camunda:validation>
+                <camunda:constraint config="true" name="readonly"/>
+              </camunda:validation>
+            </camunda:formField>
+            <camunda:formField id="No1Workmanship" label="No1Workmanship" type="string">
+              <camunda:validation>
+                <camunda:constraint config="true" name="readonly"/>
+              </camunda:validation>
+            </camunda:formField>
+            <camunda:formField id="No2Workmanship" label="No2Workmanship" type="string">
+              <camunda:validation>
+                <camunda:constraint config="true" name="readonly"/>
+              </camunda:validation>
+            </camunda:formField>
+            <camunda:formField id="No3Workmanship" label="No3Workmanship" type="string">
+              <camunda:validation>
+                <camunda:constraint config="true" name="readonly"/>
+              </camunda:validation>
+            </camunda:formField>
+            <camunda:formField defaultValue="10000" id="RewardAmount" label="RewardAmount" type="long">
+              <camunda:validation>
+                <camunda:constraint config="true" name="readonly"/>
+              </camunda:validation>
+            </camunda:formField>
+            <camunda:formField id="reviewer" label="reviewer" type="string">
+              <camunda:validation>
+                <camunda:constraint config="true" name="readonly"/>
+              </camunda:validation>
+            </camunda:formField>
+            <camunda:formField id="reviewResult" label="reviewResult" type="enum">
+              <camunda:value id="NOT_REVIEW" name="NOT_REVIEW"/>
+              <camunda:value id="APPROVE" name="APPROVE"/>
+              <camunda:value id="REJECT" name="REJECT"/>
+            </camunda:formField>
+          </camunda:formData>
+        </bpmn:extensionElements>
+        <bpmn:incoming>SequenceFlow_1es6rsf</bpmn:incoming>
+        <bpmn:outgoing>SequenceFlow_1cbnqvg</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:scriptTask id="Task_07hvbtg" name="Update Result" scriptFormat="groovy">
+        <bpmn:incoming>SequenceFlow_1cbnqvg</bpmn:incoming>
+        <bpmn:outgoing>SequenceFlow_0r400ep</bpmn:outgoing>
+        <bpmn:script><![CDATA[/*อัพเดต Result */
+reviewResultMap[reviewer] =  reviewResult;
+out:println "review result on instance id: " + loopCounter + "-value-"+  reviewResultMap[reviewer] + "-by-" + reviewer;
+
+execution.setVariable ("reviewResultMap", reviewResultMap);
+
+
+]]></bpmn:script>
+      </bpmn:scriptTask>
+      <bpmn:sequenceFlow id="SequenceFlow_0r400ep" sourceRef="Task_07hvbtg" targetRef="EndEvent_0ov7unr"/>
+    </bpmn:subProcess>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane bpmnElement="Collaboration_1ukzxwm" id="BPMNPlane_1">
+      <bpmndi:BPMNShape bpmnElement="StartEvent_04zeqi7" id="StartEvent_04zeqi7_di">
+        <dc:Bounds height="36" width="36" x="264" y="271"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="237" y="311"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="EndEvent_0ov7unr" id="EndEvent_0ov7unr_di">
+        <dc:Bounds height="36" width="36" x="565" y="271"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="538" y="311"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1es6rsf" id="SequenceFlow_1es6rsf_di">
+        <di:waypoint x="300" xsi:type="dc:Point" y="289"/>
+        <di:waypoint x="321" xsi:type="dc:Point" y="289"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="266" y="268"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1cbnqvg" id="SequenceFlow_1cbnqvg_di">
+        <di:waypoint x="421" xsi:type="dc:Point" y="289"/>
+        <di:waypoint x="445" xsi:type="dc:Point" y="289"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="388" y="268"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="Task_0eroej3" id="UserTask_10a4qhe_di">
+        <dc:Bounds height="80" width="100" x="321" y="249"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Participant_1jytf7q" id="Participant_1jytf7q_di">
+        <dc:Bounds height="465" width="1099" x="123" y="-60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="_BPMNShape_StartEvent_2">
+        <dc:Bounds height="36" width="36" x="227" y="-23"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="36" width="85" x="202" y="17"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_1l0vjpp" id="UserTask_0rmfsuf_di">
+        <dc:Bounds height="80" width="100" x="332" y="-45"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_0p0dthr" id="ScriptTask_0zxuyho_di">
+        <dc:Bounds height="80" width="100" x="487" y="-45"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_1uzfnxh" id="UserTask_1wa2mm2_di">
+        <dc:Bounds height="80" width="100" x="935" y="57"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_0o9iylr" id="UserTask_0b03w9m_di">
+        <dc:Bounds height="80" width="100" x="935" y="-45"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="EndEvent_111ifpl" id="EndEvent_111ifpl_di">
+        <dc:Bounds height="36" width="36" x="1111" y="-23"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="69" x="1095" y="17"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="EndEvent_1mu7bj0" id="EndEvent_1mu7bj0_di">
+        <dc:Bounds height="36" width="36" x="1111" y="79"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="54" x="1103" y="119"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="ExclusiveGateway_1cfwqqd" id="ExclusiveGateway_1cfwqqd_di" isMarkerVisible="true">
+        <dc:Bounds height="50" width="50" x="789" y="21"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="89" x="722" y="15"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_0ofwv70" id="ScriptTask_1og7wn4_di">
+        <dc:Bounds height="80" width="100" x="676" y="241"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="EvaluateProcess" id="SubProcess_1sva43h_di" isExpanded="true">
+        <dc:Bounds height="195" width="377" x="244" y="188"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1nhdcp1" id="SequenceFlow_1nhdcp1_di">
+        <di:waypoint x="263" xsi:type="dc:Point" y="-5"/>
+        <di:waypoint x="332" xsi:type="dc:Point" y="-5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="252.5" y="-26"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0y00p8b" id="SequenceFlow_0y00p8b_di">
+        <di:waypoint x="432" xsi:type="dc:Point" y="-5"/>
+        <di:waypoint x="487" xsi:type="dc:Point" y="-5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="414.5" y="-26"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0azgsh3" id="SequenceFlow_0azgsh3_di">
+        <di:waypoint x="537" xsi:type="dc:Point" y="35"/>
+        <di:waypoint x="537" xsi:type="dc:Point" y="120"/>
+        <di:waypoint x="207" xsi:type="dc:Point" y="120"/>
+        <di:waypoint x="207" xsi:type="dc:Point" y="287"/>
+        <di:waypoint x="244" xsi:type="dc:Point" y="287"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="327" y="99"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_125qqc9" id="SequenceFlow_125qqc9_di">
+        <di:waypoint x="814" xsi:type="dc:Point" y="71"/>
+        <di:waypoint x="814" xsi:type="dc:Point" y="97"/>
+        <di:waypoint x="935" xsi:type="dc:Point" y="97"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="43" x="821" y="79"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0qvflnw" id="SequenceFlow_0qvflnw_di">
+        <di:waypoint x="1035" xsi:type="dc:Point" y="97"/>
+        <di:waypoint x="1111" xsi:type="dc:Point" y="97"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="0" x="1073" y="76"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_06tfs2q" id="SequenceFlow_06tfs2q_di">
+        <di:waypoint x="814" xsi:type="dc:Point" y="21"/>
+        <di:waypoint x="814" xsi:type="dc:Point" y="-5"/>
+        <di:waypoint x="935" xsi:type="dc:Point" y="-5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="48" x="820" y="-25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_04bpp14" id="SequenceFlow_04bpp14_di">
+        <di:waypoint x="1035" xsi:type="dc:Point" y="-5"/>
+        <di:waypoint x="1091" xsi:type="dc:Point" y="-5"/>
+        <di:waypoint x="1091" xsi:type="dc:Point" y="-5"/>
+        <di:waypoint x="1111" xsi:type="dc:Point" y="-5"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="0" x="1106" y="-11"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0bslxhz" id="SequenceFlow_0bslxhz_di">
+        <di:waypoint x="726" xsi:type="dc:Point" y="241"/>
+        <di:waypoint x="726" xsi:type="dc:Point" y="46"/>
+        <di:waypoint x="789" xsi:type="dc:Point" y="46"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="696" y="137.5"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1a0h9gg" id="SequenceFlow_1a0h9gg_di">
+        <di:waypoint x="621" xsi:type="dc:Point" y="287"/>
+        <di:waypoint x="649" xsi:type="dc:Point" y="287"/>
+        <di:waypoint x="649" xsi:type="dc:Point" y="281"/>
+        <di:waypoint x="676" xsi:type="dc:Point" y="281"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="619" y="278"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="Lane_0feow9m" id="Lane_0feow9m_di">
+        <dc:Bounds height="242" width="1069" x="153" y="163"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Lane_0r1co7i" id="Lane_0r1co7i_di">
+        <dc:Bounds height="223" width="1069" x="153" y="-60"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_07hvbtg" id="ScriptTask_0hlg5fz_di">
+        <dc:Bounds height="80" width="100" x="445" y="249"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0r400ep" id="SequenceFlow_0r400ep_di">
+        <di:waypoint x="545" xsi:type="dc:Point" y="289"/>
+        <di:waypoint x="565" xsi:type="dc:Point" y="289"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="510" y="268"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

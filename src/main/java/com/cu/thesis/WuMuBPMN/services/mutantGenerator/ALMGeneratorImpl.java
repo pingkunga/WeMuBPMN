@@ -1,0 +1,69 @@
+package com.cu.thesis.WuMuBPMN.services.mutantGenerator;
+
+
+import java.util.List;
+
+import com.cu.thesis.WuMuBPMN.entities.mutantGenerator.mutantTestItem;
+
+public class ALMGeneratorImpl extends mutantGeneratorBase implements mutantGenerator
+{
+    @Override
+    public String GetParentFocusBPMNTag(){
+        return "bpmn:multiInstanceLoopCharacteristics";
+    }
+
+    @Override
+    public String GetFocusBPMNTag() {
+        return "bpmn:completionCondition";
+    }
+  
+    @Override
+    public String GetFocusBPMNAttribute()
+    {
+        return "";
+    }
+  
+    @Override
+    public List<String> GetAvaliableOperatorbyType() {
+        return LOGICAL_OPERATOR_LIST;
+    }
+
+	@Override
+	public mutantTestItem FindPossibleMutant(String pBPMNFile) {
+
+        mutantTestItem result = null;
+        try
+        {
+            result = super.FindPossibleARLMutant(pBPMNFile
+                                               , "ALM"
+                                               , REGEX_LOGICAL
+                                               , GetParentFocusBPMNTag()
+                                               , GetFocusBPMNTag());
+        }
+        catch (Exception ex)
+        {
+
+        }
+        return result;
+    }
+    
+    @Override
+    public mutantTestItem GenerateMutantByOperator(mutantTestItem pMutantTestItem)
+    {
+        try
+        {
+            return super.GenerateMutantByARLOperator(pMutantTestItem
+                                                   , GetAvaliableOperatorbyType()
+                                                   , REGEX_LOGICAL
+                                                   , GetParentFocusBPMNTag()
+                                                   , GetFocusBPMNTag());
+        }
+        catch (Exception ex)
+        {
+            System.out.println(ex.getMessage());
+        }
+
+        return pMutantTestItem;
+    }
+
+}

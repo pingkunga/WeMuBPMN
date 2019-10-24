@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.11.3">
+  <bpmn:process id="testTimer" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="R4/2018-06-05T08:00/PT5M">
+      <bpmn:outgoing>SequenceFlow_18slmhg</bpmn:outgoing>
+      <bpmn:timerEventDefinition>
+        <bpmn:timeCycle xsi:type="bpmn:tFormalExpression">R4/2018-06-05T08:00/PT5M</bpmn:timeCycle>
+      </bpmn:timerEventDefinition>
+    </bpmn:startEvent>
+    <bpmn:scriptTask id="Task_1gb33wh" name="Collect Order Data" scriptFormat="groovy">
+      <bpmn:incoming>SequenceFlow_18slmhg</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1sdsouk</bpmn:outgoing>
+      <bpmn:script><![CDATA[out:println "Task Execute on " + new Date().format( 'yyyy-MM-dd' );
+;]]></bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:userTask id="Task_0es5z48" name="Accept Data" camunda:assignee="mary" camunda:dueDate="2018-07-30T12:00:00">
+      <bpmn:incoming>SequenceFlow_1sdsouk</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0lpq6tj</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="EndEvent_0vwhorr">
+      <bpmn:incoming>SequenceFlow_0lpq6tj</bpmn:incoming>
+      <bpmn:terminateEventDefinition />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_18slmhg" sourceRef="StartEvent_1" targetRef="Task_1gb33wh" />
+    <bpmn:sequenceFlow id="SequenceFlow_1sdsouk" sourceRef="Task_1gb33wh" targetRef="Task_0es5z48" />
+    <bpmn:sequenceFlow id="SequenceFlow_0lpq6tj" sourceRef="Task_0es5z48" targetRef="EndEvent_0vwhorr" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="testTimer">
+      <bpmndi:BPMNShape id="StartEvent_0ybevt0_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="98" y="312" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="77" y="353" width="78" height="24" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_1ezou7e_di" bpmnElement="Task_1gb33wh">
+        <dc:Bounds x="188" y="290" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_16w06za_di" bpmnElement="Task_0es5z48">
+        <dc:Bounds x="355" y="290" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0fvvo16_di" bpmnElement="EndEvent_0vwhorr">
+        <dc:Bounds x="524" y="312" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="496" y="352" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_18slmhg_di" bpmnElement="SequenceFlow_18slmhg">
+        <di:waypoint xsi:type="dc:Point" x="134" y="330" />
+        <di:waypoint xsi:type="dc:Point" x="188" y="330" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="116" y="309" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1sdsouk_di" bpmnElement="SequenceFlow_1sdsouk">
+        <di:waypoint xsi:type="dc:Point" x="288" y="330" />
+        <di:waypoint xsi:type="dc:Point" x="355" y="330" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="277" y="309" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0lpq6tj_di" bpmnElement="SequenceFlow_0lpq6tj">
+        <di:waypoint xsi:type="dc:Point" x="455" y="330" />
+        <di:waypoint xsi:type="dc:Point" x="524" y="330" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="445" y="309" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

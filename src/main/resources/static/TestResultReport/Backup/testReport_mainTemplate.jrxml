@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="testReport_template" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="47785a72-ce09-4515-92bb-9f6f366c5092">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#FBFDFF"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#DC002C">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#FFE6EB">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="testResultMutantSummary" uuid="c55b7388-0496-4800-99f9-e73e7e19bf0f">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<parameter name="testResultReportInput" class="com.cu.thesis.WuMuBPMN.entities.testExecution.testResultReportInput">
+			<defaultValueExpression><![CDATA[$P{testResultReportInput}]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="mutationOperator" class="java.lang.String">
+			<property name="net.sf.jasperreports.sql.field.column.label" value=""/>
+			<fieldDescription><![CDATA[mutationOperator]]></fieldDescription>
+		</field>
+		<field name="totalKilled" class="java.lang.Integer">
+			<fieldDescription><![CDATA[totalKilled]]></fieldDescription>
+		</field>
+		<field name="totalLive" class="java.lang.Integer">
+			<fieldDescription><![CDATA[totalLive]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="testResultReportInput" class="com.cu.thesis.WuMuBPMN.entities.testExecution.testResultReportInput"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="68" splitType="Stretch">
+			<textField>
+				<reportElement x="110" y="18" width="445" height="40" uuid="412da60d-9b52-4793-b89b-7ba47b9ffa34"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="WumunBPMNTHSarabunNew" size="24" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ผลการทดสอบแบบจำลอง: " + $P{testResultReportInput}.getTestItem().getTestItemName()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="9" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="154" splitType="Stretch">
+			<textField>
+				<reportElement x="150" y="0" width="360" height="30" uuid="96bef04e-c4b5-458c-a75e-d5ca2e2d16bc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS").format( $P{testResultReportInput}.getTestStart())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="30" width="360" height="30" uuid="b3ac4f4a-0747-46a1-a5b1-51b6fae551e1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS").format( $P{testResultReportInput}.getTestFinish())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="60" width="360" height="30" uuid="1271acf6-3818-41d4-bf07-353f0bcab2ff"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{testResultReportInput}.getExecutionTime() + " วินาที"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="90" width="360" height="30" uuid="26d2f378-07bc-4f53-8d4e-8bb2f19a4407"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{testResultReportInput}.getMutationScore()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="120" width="360" height="30" uuid="10622f2f-e5b7-4fbe-824b-8e1bda644554"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{testResultReportInput}.getTestEffectiveness() + "%"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="140" height="30" uuid="bc9fae2e-adff-41ed-a4b6-ca897e7bb747"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+				</textElement>
+				<text><![CDATA[เวลาเริ่มต้นทดสอบ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="140" height="30" uuid="e89f2f74-7965-465a-a2bf-cfb481fc8be6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+				</textElement>
+				<text><![CDATA[เวลาสิ้นสุดการทดสอบ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="140" height="30" uuid="0d3d8405-a238-4dfa-a768-45f46c8c3064"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+				</textElement>
+				<text><![CDATA[เวลาที่ใช้]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="140" height="30" uuid="313f65fd-7208-44d5-8bf8-3ae59e76d6fe"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+				</textElement>
+				<text><![CDATA[คะแนนมิวเทชัน]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="140" height="30" uuid="2ef434d2-f123-4157-aae1-7d38d9baca8a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+				</textElement>
+				<text><![CDATA[ประสิทธิภาพของการทดสอบ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="278" splitType="Stretch">
+			<componentElement>
+				<reportElement mode="Transparent" x="50" y="150" width="490" height="110" uuid="ac31ad15-dc9b-499a-b9fc-37a2e3e4e0da">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+					<property name="com.jaspersoft.studio.components.autoresize.next" value="true"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="testResultMutantSummary" uuid="40187d8c-4745-4c42-98dc-57e6eedf204a">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{testResultReportInput}.getTestResultMutantSummaryls())]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="240" uuid="9069046c-8ced-4bcc-a57e-797123ef2237">
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="240" height="30" uuid="84b0d18c-c1be-42ea-986c-8ccf2a4df21a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="18" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ตัวดำเนินการมิวเทชัน]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="240" height="30" uuid="4aa9b72a-2bfc-4767-be88-299f4c5b87ab"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+								</textElement>
+								<text><![CDATA[จำนวนทั้งหมด]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="240" height="30" uuid="6b4f2347-d2b7-4261-8620-911f5b95674b"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{mutationOperator}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="130" uuid="895d1c6e-6648-4a03-9096-2410b57f31dd">
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="130" height="30" uuid="53e75644-5b48-4783-ab55-9096d5c77b41"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="18" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ถูกฆ่า]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table 1_CH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="130" height="30" uuid="558a76a3-1edc-4c6f-afc4-baf0eb4abd5c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{testResultReportInput}.getTotalKilled()]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="130" height="30" uuid="a3fa9b4f-fd49-4d0a-b8cf-d375c2cc47b0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{totalKilled}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="ce0625c2-ee08-472b-b500-3d119f60e2a9">
+						<jr:columnHeader style="Table 1_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="120" height="30" uuid="6a4d55c9-603e-42b6-9f22-0139e07e1dac"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="18" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ที่ยังมีชีวิต]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table 1_CH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="30" uuid="f9dfa4c2-93bf-4e22-b18f-c77fef457d4e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{testResultReportInput}.getTotalLive()]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="30" uuid="8c1b49d1-ebcf-4866-aa25-a5f370e48908"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="WumunBPMNTHSarabunNew" size="18"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{totalLive}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<subreport>
+				<reportElement x="150" y="70" width="361" height="50" uuid="4e39a7cb-7976-4c0b-a879-b57c86e8077d"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["src/main/resources/static/TestResultReport/testReport_subMutantResult.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

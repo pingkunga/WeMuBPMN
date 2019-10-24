@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Camunda Modeler" exporterVersion="1.11.3" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:collaboration id="Collaboration_1bx0p1d">
+    <bpmn:participant id="Participant_1xh6gww" name="Incident Report Generator" processRef="BatchIncidentReport"/>
+  </bpmn:collaboration>
+  <bpmn:process id="BatchIncidentReport_ERA_3" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_02g5boe" name="System">
+        <bpmn:flowNodeRef>Task_1nxw95d</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_06yo0ub</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1refgkm</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_1grxcnz" name="Customer Service">
+        <bpmn:flowNodeRef>EndEvent_1dgnj7p</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_0qoy2fy</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>BoundaryEvent_0zc1y7a</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>ExclusiveGateway_0j0k30d</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0p52z5q" name="Manager">
+        <bpmn:flowNodeRef>Task_1kd29zs</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1d8gfcg</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1kylegl</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:sequenceFlow id="SequenceFlow_0xsx8g7" name="round 1" sourceRef="ExclusiveGateway_0j0k30d" targetRef="Task_0qoy2fy">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${round == 1}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_126e83l" sourceRef="Task_1kd29zs" targetRef="Task_1d8gfcg"/>
+    <bpmn:sequenceFlow id="SequenceFlow_1uus2hn" sourceRef="StartEvent_1" targetRef="Task_06yo0ub"/>
+    <bpmn:sequenceFlow id="SequenceFlow_1gmhko1" sourceRef="BoundaryEvent_0zc1y7a" targetRef="Task_1d8gfcg"/>
+    <bpmn:sequenceFlow id="SequenceFlow_1kr64kq" sourceRef="Task_1d8gfcg" targetRef="EndEvent_1kylegl"/>
+    <bpmn:sequenceFlow id="SequenceFlow_1qqlq13" name="round 2&#10;&#10;" sourceRef="ExclusiveGateway_0j0k30d" targetRef="Task_1kd29zs">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${round == 2}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1nm6z1l" sourceRef="Task_1nxw95d" targetRef="ExclusiveGateway_0j0k30d"/>
+    <bpmn:sequenceFlow id="SequenceFlow_0z0i428" sourceRef="Task_1refgkm" targetRef="Task_1nxw95d"/>
+    <bpmn:sequenceFlow id="SequenceFlow_0y87ks2" sourceRef="Task_0qoy2fy" targetRef="EndEvent_1dgnj7p"/>
+    <bpmn:endEvent id="EndEvent_1dgnj7p" name="End">
+      <bpmn:incoming>SequenceFlow_0y87ks2</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:scriptTask id="Task_1nxw95d" name="Process Incident" scriptFormat="groovy">
+      <bpmn:incoming>SequenceFlow_0z0i428</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1nm6z1l</bpmn:outgoing>
+      <bpmn:script><![CDATA[NextDay = (new Date() + 1).format("yyyy-MM-dd'T'HH:mm:ss'Z'", TimeZone.getTimeZone("UTC"))
+execution.setVariable ("NextDay", NextDay);
+
+def emptyMap = [:];
+
+incidentCount = 0;
+ItemDesc = "";
+Status = "";
+for(issueItem in issueItems.elements())
+{
+      Status = (issueItem.prop("status").stringValue()).toString();
+      ItemDesc = ItemDesc + (issueItem.prop("id").numberValue()).toString() + ": ";
+      ItemDesc = ItemDesc + (issueItem.prop("subject").stringValue()).toString();
+      ItemDesc = ItemDesc + " (" + Status + ")";
+      ItemDesc = ItemDesc + "||";
+      incidentCount = incidentCount + 1;
+
+      if (emptyMap.containsKey(Status)) {
+          emptyMap[Status] = emptyMap[Status] + 1;
+      }
+      else{
+          emptyMap[Status] = 1;
+      }
+}
+out:println "ItemDesc:" + ItemDesc;
+out:println "emptyMap:" + emptyMap;
+out:println "incidentCount :" + incidentCount ;
+
+execution.setVariable ("emptyMap", emptyMap);
+execution.setVariable ("ItemDesc", ItemDesc);]]></bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:startEvent id="StartEvent_1" name="Timer Start">
+      <bpmn:outgoing>SequenceFlow_1uus2hn</bpmn:outgoing>
+      <bpmn:timerEventDefinition>
+        <bpmn:timeCycle xsi:type="bpmn:tFormalExpression">R3/PT1M</bpmn:timeCycle>
+      </bpmn:timerEventDefinition>
+    </bpmn:startEvent>
+    <bpmn:scriptTask id="Task_06yo0ub" name="External Variable" scriptFormat="groovy">
+      <bpmn:incoming>SequenceFlow_1uus2hn</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_146dyyj</bpmn:outgoing>
+      <bpmn:script><![CDATA[//Read Request
+import groovy.json.JsonSlurper
+def json = new JsonSlurper().parseText( new URL( "http://localhost:3000/tmp/1").text )
+Map jsonResult = (Map) json;
+round = jsonResult.get("counta")
+
+//out:println "round :" + round ;
+
+//Write Request
+def url = new URL("http://localhost:3000/tmp/1").openConnection()
+url.setDoOutput(true);
+url.setDoInput(true);
+url.setRequestMethod('PUT');
+url.setRequestProperty('Content-Type', 'application/json');
+
+//def out = new OutputStreamWriter(url.outputStream)
+
+execution.setVariable('round', round);
+updateData = "";
+if (round >= 2)
+{
+   out:println "round :" + round ;
+   /*
+   url.outputStream.withWriter { Writer writer ->
+        writer << "{\"counta\":1}"
+   }*/
+   updateData  = "{\"counta\":1}";
+}
+else
+{
+   round = round + 1
+   out:println "round x:" + round ;
+   /*
+   url.outputStream.withWriter { Writer writer ->
+        writer << "{\"counta\":" + round + "}"
+   }
+   */
+   updateData  =  "{\"counta\":" + round + "}"
+}
+def out = new OutputStreamWriter(url.outputStream);
+out.write(updateData);
+out.close();
+String response = url.inputStream.withReader { Reader reader -> reader.text }
+out:println response ;]]></bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="SequenceFlow_146dyyj" sourceRef="Task_06yo0ub" targetRef="Task_1refgkm"/>
+    <bpmn:serviceTask id="Task_1refgkm" name="Get Incident">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">
+              <camunda:script scriptFormat="groovy"><![CDATA["http://localhost:3000/issues".toString()]]></camunda:script>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="method">GET</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="issueItems">
+              <camunda:script scriptFormat="groovy"><![CDATA[import groovy.json.JsonSlurper;
+import groovy.json.JsonOutput;
+import groovy.json.JsonBuilder;
+import org.camunda.spin.Spin.*;
+
+jsonResponse= connector.getVariable("response");
+out:println "jsonResponse :" + jsonResponse;
+
+JsonSlurper jsonSlurper = new JsonSlurper();
+Object result = jsonSlurper.parseText(jsonResponse);
+//out:println "result:" + result ;
+out:println "result1:" + result.size() ;
+/*
+round = connector.getVariable('round');
+if (round == null)
+{
+    out:println "initial" ;
+    connector.setVariable('round', 1);
+}
+else
+{
+    out:println "next" ;
+    round = round + 1;
+    connector.setVariable('round',  round);
+}
+*/
+
+if (result.size() > 0)
+{
+   Map jsonResponseMap  = (Map)result[0] ;
+
+   //https://forum.camunda.org/t/http-connector-and-assigning-output-results-to-an-instance-variable/3009
+   //Step Value to Process Engine
+   connector.setVariable('id', jsonResponseMap.get("id"));
+   out:println "id:" + id ;
+   //S = Camunda Spin
+   //Return Result 
+   S(new JsonBuilder(result).toPrettyString());
+}
+else
+{
+   out:println "Else"
+   connector.setVariable('incidentCount', -1);
+   issueItems = "not found";
+}]]></camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_146dyyj</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0z0i428</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Task_0qoy2fy" name="Review Incident Report">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="ItemDesc" label="ItemDesc" type="string"/>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0xsx8g7</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0y87ks2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:boundaryEvent attachedToRef="Task_0qoy2fy" id="BoundaryEvent_0zc1y7a">
+      <bpmn:outgoing>SequenceFlow_1gmhko1</bpmn:outgoing>
+      <bpmn:timerEventDefinition>
+        <bpmn:timeDate xsi:type="bpmn:tFormalExpression">2019-10-24</bpmn:timeDate>
+      </bpmn:timerEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_0j0k30d">
+      <bpmn:incoming>SequenceFlow_1nm6z1l</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0xsx8g7</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1qqlq13</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:scriptTask id="Task_1kd29zs" name="Create Summary" scriptFormat="groovy">
+      <bpmn:incoming>SequenceFlow_1qqlq13</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_126e83l</bpmn:outgoing>
+      <bpmn:script><![CDATA[emptyMap = execution.getVariable ("emptyMap");
+
+ItemSummary = "";
+for (entry in emptyMap) {
+    ItemSummary = ItemSummary + entry.key +  ": " + entry.value;
+    ItemSummary = ItemSummary + "||";
+}
+out:println "ItemSummary:" + ItemSummary;
+emptyMap = execution.setVariable ("ItemSummary", ItemSummary);]]></bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:userTask id="Task_1d8gfcg" name="View Incident Report Summary">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="ItemDesc" label="ItemDesc" type="string"/>
+          <camunda:formField id="ItemSummary" label="ItemSummary" type="string"/>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_126e83l</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1gmhko1</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1kr64kq</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="EndEvent_1kylegl" name="End">
+      <bpmn:incoming>SequenceFlow_1kr64kq</bpmn:incoming>
+    </bpmn:endEvent>
+  </bpmn:process>
+  <bpmn:error id="Error_0lufz7q"/>
+  <bpmn:error id="Error_1fizl6q" name="Error_1bsq1tt"/>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane bpmnElement="Collaboration_1bx0p1d" id="BPMNPlane_1">
+      <bpmndi:BPMNShape bpmnElement="Participant_1xh6gww" id="Participant_1xh6gww_di">
+        <dc:Bounds height="450" width="888" x="211" y="69"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="ExclusiveGateway_0j0k30d" id="ExclusiveGateway_0j0k30d_di" isMarkerVisible="true">
+        <dc:Bounds height="50" width="50" x="643" y="264"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="623" y="318"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Lane_02g5boe" id="Lane_02g5boe_di">
+        <dc:Bounds height="169" width="858" x="241" y="69"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Lane_1grxcnz" id="Lane_1grxcnz_di">
+        <dc:Bounds height="127" width="858" x="241" y="238"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Lane_0p52z5q" id="Lane_0p52z5q_di">
+        <dc:Bounds height="154" width="858" x="241" y="365"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0xsx8g7" id="SequenceFlow_0xsx8g7_di">
+        <di:waypoint x="693" xsi:type="dc:Point" y="289"/>
+        <di:waypoint x="755" xsi:type="dc:Point" y="289"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="37" x="699.1537120322926" y="269.1693103584583"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_126e83l" id="SequenceFlow_126e83l_di">
+        <di:waypoint x="718" xsi:type="dc:Point" y="468"/>
+        <di:waypoint x="755" xsi:type="dc:Point" y="468"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="691.5" y="447"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1uus2hn" id="SequenceFlow_1uus2hn_di">
+        <di:waypoint x="314" xsi:type="dc:Point" y="149"/>
+        <di:waypoint x="344" xsi:type="dc:Point" y="148"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="284" y="127.5"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1gmhko1" id="SequenceFlow_1gmhko1_di">
+        <di:waypoint x="805" xsi:type="dc:Point" y="349"/>
+        <di:waypoint x="805" xsi:type="dc:Point" y="428"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="775" y="382.5"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="EndEvent_1dgnj7p" id="EndEvent_1dgnj7p_di">
+        <dc:Bounds height="36" width="36" x="981" y="271"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="19" x="990" y="311"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="EndEvent_1kylegl" id="EndEvent_1kylegl_di">
+        <dc:Bounds height="36" width="36" x="981" y="450"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="19" x="990" y="490"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1kr64kq" id="SequenceFlow_1kr64kq_di">
+        <di:waypoint x="855" xsi:type="dc:Point" y="468"/>
+        <di:waypoint x="918" xsi:type="dc:Point" y="468"/>
+        <di:waypoint x="918" xsi:type="dc:Point" y="468"/>
+        <di:waypoint x="981" xsi:type="dc:Point" y="468"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="888" y="462"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1qqlq13" id="SequenceFlow_1qqlq13_di">
+        <di:waypoint x="668" xsi:type="dc:Point" y="314"/>
+        <di:waypoint x="668" xsi:type="dc:Point" y="428"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="36" width="37" x="683.3501970677321" y="330.79204693611473"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="Task_1refgkm" id="ServiceTask_10tvp17_di">
+        <dc:Bounds height="80" width="100" x="478" y="108"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1nm6z1l" id="SequenceFlow_1nm6z1l_di">
+        <di:waypoint x="668" xsi:type="dc:Point" y="188"/>
+        <di:waypoint x="668" xsi:type="dc:Point" y="264"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="638" y="220"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0z0i428" id="SequenceFlow_0z0i428_di">
+        <di:waypoint x="578" xsi:type="dc:Point" y="148"/>
+        <di:waypoint x="618" xsi:type="dc:Point" y="148"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="553" y="127"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="Task_1nxw95d" id="ScriptTask_08fd8ro_di">
+        <dc:Bounds height="80" width="100" x="618" y="108"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="BoundaryEvent_0zc1y7a" id="BoundaryEvent_0iw7eyu_di">
+        <dc:Bounds height="36" width="36" x="787" y="311"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="90" x="760" y="351"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_0qoy2fy" id="UserTask_0diq19p_di">
+        <dc:Bounds height="80" width="100" x="755" y="249"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_1d8gfcg" id="UserTask_10a2k52_di">
+        <dc:Bounds height="80" width="100" x="755" y="428"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_1kd29zs" id="ScriptTask_1k08lqx_di">
+        <dc:Bounds height="80" width="100" x="618" y="428"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="StartEvent_081zaql_di">
+        <dc:Bounds height="36" width="36" x="278" y="131"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="56" x="268" y="172"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_0y87ks2" id="SequenceFlow_0y87ks2_di">
+        <di:waypoint x="855" xsi:type="dc:Point" y="289"/>
+        <di:waypoint x="981" xsi:type="dc:Point" y="289"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="0" x="918" y="268"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape bpmnElement="Task_06yo0ub" id="ScriptTask_0zy569s_di">
+        <dc:Bounds height="80" width="100" x="344" y="108"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_146dyyj" id="SequenceFlow_146dyyj_di">
+        <di:waypoint x="444" xsi:type="dc:Point" y="148"/>
+        <di:waypoint x="478" xsi:type="dc:Point" y="148"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="12" width="0" x="461" y="127"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

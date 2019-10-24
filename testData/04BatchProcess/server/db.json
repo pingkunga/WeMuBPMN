@@ -1,0 +1,25 @@
+{
+  "issues": [
+    {
+      "id": 292049,
+      "status": "NEW",
+      "subject": "INV-DB : Bonanza application Infra migration"
+    },
+    {
+      "id": 283524,
+      "status": "NEW",
+      "subject": "INV-DB: Microsoft .NET Framework version 4.5.2 and 4.7.1 upgrade to version 4.7.2 - Application Testing Notification [I]"
+    },
+    {
+      "id": 288479,
+      "status": "CS REVIEW",
+      "subject": "INV-DB: Operation - Login error"
+    }
+  ],
+  "tmp": [
+    {
+      "counta": 1,
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LearnSubReport" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a49c28a5-006a-4c92-ab05-e7ccd4501f11">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="WeMuBPMN"/>
+	<parameter name="P_MUTANTTESTITEMID" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_BPMNNAME" class="java.lang.String">
+		<defaultValueExpression><![CDATA["TESTLOAN"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT testresulthead.testresultheadid,
+            testresulthead.executiontime,
+            testresulthead.mutanttestitemid,
+            testresulthead.mutationscore,
+            testresulthead.testeffectiveness,
+            testresulthead.testcasepath,
+            testresulthead.testfinish,
+            testresulthead.teststart
+FROM wumubpmn1.testresulthead
+where mutanttestitemid = $P{P_MUTANTTESTITEMID}
+Order by testresulthead.teststart]]>
+	</queryString>
+	<field name="testresultheadid" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="testresultheadid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="executiontime" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="executiontime"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="mutanttestitemid" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="mutanttestitemid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="mutationscore" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="mutationscore"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="testeffectiveness" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="testeffectiveness"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="testcasepath" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="testcasepath"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="testfinish" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="testfinish"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<field name="teststart" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="teststart"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="testresulthead"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="560" height="38" uuid="34396e99-78ff-4413-ad54-4f3a23bdf790"/>
+				<textElement textAlignment="Center">
+					<font fontName="WumunBPMNTHSarabunNew" size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ผลการทดสอบแบบจำลอง " + $P{P_BPMNNAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="144" splitType="Stretch">
+			<subreport isUsingCache="false" overflowType="Stretch">
+				<reportElement x="0" y="0" width="560" height="140" uuid="500984e0-13a7-4779-8d50-16b47f74e036"/>
+				<subreportParameter name="SP_TESTRESULTID">
+					<subreportParameterExpression><![CDATA[$F{testresultheadid}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SP_TESTCOUNT">
+					<subreportParameterExpression><![CDATA[$V{REPORT_COUNT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["src/main/resources/static/TestResultReport/testResultSubReport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

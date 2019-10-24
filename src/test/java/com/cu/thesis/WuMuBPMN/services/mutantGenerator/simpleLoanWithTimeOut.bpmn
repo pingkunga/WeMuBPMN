@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.11.3">
+  <bpmn:process id="simpleLoanWithTimeOut" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_10cyysk</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="Task_1tk0az0" name="Enter Loan Amount">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="name" label="name" type="string" defaultValue="chatri" />
+          <camunda:formField id="loanAmt" label="loanAmt" type="long" />
+        </camunda:formData>
+        <camunda:executionListener event="end">
+          <camunda:script scriptFormat="groovy"><![CDATA[out:println "=========================================";
+def line1 = "Traverse task  Enter Loan Amount";
+out:println line1;
+out:println "=========================================";]]></camunda:script>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_10cyysk</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_18iqwz4</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_1vvk9zq" name="Loan Reqest Complete">
+      <bpmn:extensionElements>
+        <camunda:executionListener event="end">
+          <camunda:script scriptFormat="groovy"><![CDATA[out:println "=========================================";
+def line1 = "Traverse task Loan Reqest Complete";
+out:println line1;
+out:println "=========================================";]]></camunda:script>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0uq3u4y</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0uas2cs</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_0ltjr61">
+      <bpmn:extensionElements>
+        <camunda:executionListener event="start">
+          <camunda:script scriptFormat="groovy"><![CDATA[def line1 = "execution id " + execution.getProcessInstanceId();
+def line2 = "loanAmt =" + execution.getVariable("loanAmt");
+def exp = "loanAmt <= 50000";
+exp = exp.replace("loanAmt" , (String)execution.getVariable("loanAmt"));
+def line3 = "instrument for expression " + exp;
+def line4 = "Result " + Eval.me(exp);
+out:println "========================================="
+out:println line1;
+out:println line2;
+out:println line3;
+out:println line4;
+out:println "========================================="]]></camunda:script>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_18iqwz4</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0qg85fm</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_05wq8of</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0qg85fm" name="if (loanAmt &#60;= 50000)" sourceRef="ExclusiveGateway_0ltjr61" targetRef="ExclusiveGateway_1rqnqwr">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${loanAmt <= 50000}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_10cyysk" sourceRef="StartEvent_1" targetRef="Task_1tk0az0" />
+    <bpmn:endEvent id="EndEvent_0lnpahn">
+      <bpmn:incoming>SequenceFlow_14o14xg</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_14o14xg" sourceRef="ExclusiveGateway_19dfdml" targetRef="EndEvent_0lnpahn" />
+    <bpmn:sequenceFlow id="SequenceFlow_05wq8of" name="else" sourceRef="ExclusiveGateway_0ltjr61" targetRef="Task_1mo5lkw" />
+    <bpmn:exclusiveGateway id="ExclusiveGateway_0xrpnpu">
+      <bpmn:extensionElements>
+        <camunda:executionListener event="start">
+          <camunda:script scriptFormat="groovy"><![CDATA[def line1 = "execution id " + execution.getProcessInstanceId();
+def line2 = "loanAmt " + execution.getVariable("loanAmt");
+def line3 = "collateralAmt " + execution.getVariable("collateralAmt");
+def exp = "((collateralAmt / loanAmt) * 100) > 70";
+exp = exp.replace("loanAmt" , (String)execution.getVariable("loanAmt"));
+exp = exp.replace("collateralAmt" , (String)execution.getVariable("collateralAmt"));
+def line4 = "instrument for expression " + exp;
+def line5 = "Result " + Eval.me(exp);
+out:println "========================================="
+out:println line1;
+out:println line2;
+out:println line3;
+out:println line4;
+out:println line5;
+out:println "========================================="]]></camunda:script>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0j0j5ps</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1527j5i</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0qeggtf</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_18iqwz4" sourceRef="Task_1tk0az0" targetRef="ExclusiveGateway_0ltjr61" />
+    <bpmn:sequenceFlow id="SequenceFlow_0j0j5ps" sourceRef="Task_1mo5lkw" targetRef="ExclusiveGateway_0xrpnpu" />
+    <bpmn:sequenceFlow id="SequenceFlow_1527j5i" name="else" sourceRef="ExclusiveGateway_0xrpnpu" targetRef="ExclusiveGateway_0l9st2r">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${!(collateralAmt / loanAmt*100 > 70)}]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_1rqnqwr">
+      <bpmn:incoming>SequenceFlow_0qg85fm</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0qeggtf</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0uq3u4y</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0qeggtf" name="if ((collateralAmt / loanAmt) * 100)&#62; 70" sourceRef="ExclusiveGateway_0xrpnpu" targetRef="ExclusiveGateway_1rqnqwr">
+      <bpmn:documentation>กรณีเงินกู้มากกว่า credit ได้ จึงต้องนำของมาค้ำ โดยต้องมีมูลค่ามากกว่า 70% ของเงินกู้</bpmn:documentation>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[${(collateralAmt / loanAmt*100 > 70) }]]></bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_0uq3u4y" sourceRef="ExclusiveGateway_1rqnqwr" targetRef="Task_1vvk9zq" />
+    <bpmn:exclusiveGateway id="ExclusiveGateway_19dfdml">
+      <bpmn:incoming>SequenceFlow_0m51z4b</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0uas2cs</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_14o14xg</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0m51z4b" sourceRef="Task_0mbvheh" targetRef="ExclusiveGateway_19dfdml" />
+    <bpmn:sequenceFlow id="SequenceFlow_0uas2cs" sourceRef="Task_1vvk9zq" targetRef="ExclusiveGateway_19dfdml" />
+    <bpmn:userTask id="Task_1mo5lkw" name="Update Collateral">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="collateralAmt" label="collateralAmt" type="long" />
+          <camunda:formField id="collaternalInfo" label="collaternalInfo" type="string" defaultValue="นาฟิกา" />
+        </camunda:formData>
+        <camunda:executionListener event="end">
+          <camunda:script scriptFormat="groovy"><![CDATA[out:println "=========================================";
+def line1 = "Traverse task  Update Collateral";
+out:println line1;
+out:println "=========================================";]]></camunda:script>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_05wq8of</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0j0j5ps</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_0mbvheh" name="Reject Loan Request">
+      <bpmn:extensionElements>
+        <camunda:executionListener event="end">
+          <camunda:script scriptFormat="groovy"><![CDATA[out:println "=========================================";
+def line1 = "Traverse task Reject Loan Request";
+out:println line1;
+out:println "=========================================";]]></camunda:script>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_14mt1mk</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0m51z4b</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:boundaryEvent id="BoundaryEvent_1qo7rh9" name="Wait for 10 Minute" attachedToRef="Task_1mo5lkw">
+      <bpmn:extensionElements>
+        <camunda:executionListener event="end">
+          <camunda:script scriptFormat="groovy"><![CDATA[out:println "=========================================";
+def line1 = "Traverse Update Collateral Timer";
+out:println line1;
+out:println "=========================================";]]></camunda:script>
+        </camunda:executionListener>
+      </bpmn:extensionElements>
+      <bpmn:outgoing>SequenceFlow_0jz3d6h</bpmn:outgoing>
+      <bpmn:timerEventDefinition>
+        <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">PT10M</bpmn:timeDuration>
+      </bpmn:timerEventDefinition>
+    </bpmn:boundaryEvent>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_0l9st2r">
+      <bpmn:incoming>SequenceFlow_1527j5i</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0jz3d6h</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_14mt1mk</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0jz3d6h" sourceRef="BoundaryEvent_1qo7rh9" targetRef="ExclusiveGateway_0l9st2r" />
+    <bpmn:sequenceFlow id="SequenceFlow_14mt1mk" sourceRef="ExclusiveGateway_0l9st2r" targetRef="Task_0mbvheh" />
+    <bpmn:textAnnotation id="TextAnnotation_19cbg0p">
+      <bpmn:text><![CDATA[ตรวจสอบว่ากู้ไปเงินวงเงินสูงสุดที่กำหนด
+ไว้ของสหกรณ์ 50000 บาท หรือไม่]]></bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_18x07ry" sourceRef="ExclusiveGateway_0ltjr61" targetRef="TextAnnotation_19cbg0p" />
+    <bpmn:textAnnotation id="TextAnnotation_1a9fita">
+      <bpmn:text>ตรวจสอบว่าสิ่งของที่นำมาค้ำประกันมีมูลค่ามากกว่า 70% จากวงเงินกู้ หรือไม่</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1v1bk48" sourceRef="ExclusiveGateway_0xrpnpu" targetRef="TextAnnotation_1a9fita" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="simpleLoanWithTimeOut">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="175" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="148" y="138" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0qb2hjs_di" bpmnElement="Task_1tk0az0">
+        <dc:Bounds x="266" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0833nkr_di" bpmnElement="Task_1vvk9zq">
+        <dc:Bounds x="779" y="-53" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_0ltjr61_di" bpmnElement="ExclusiveGateway_0ltjr61" isMarkerVisible="true">
+        <dc:Bounds x="429.5197934595525" y="93" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="412" y="147" width="85" height="24" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0qg85fm_di" bpmnElement="SequenceFlow_0qg85fm">
+        <di:waypoint xsi:type="dc:Point" x="455" y="93" />
+        <di:waypoint xsi:type="dc:Point" x="455" y="-13" />
+        <di:waypoint xsi:type="dc:Point" x="658" y="-13" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="445" y="-42" width="67" height="24" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_10cyysk_di" bpmnElement="SequenceFlow_10cyysk">
+        <di:waypoint xsi:type="dc:Point" x="211" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="266" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="193.5" y="99" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_0lnpahn_di" bpmnElement="EndEvent_0lnpahn">
+        <dc:Bounds x="1008" y="61" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="981" y="101" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_14o14xg_di" bpmnElement="SequenceFlow_14o14xg">
+        <di:waypoint xsi:type="dc:Point" x="982" y="79" />
+        <di:waypoint xsi:type="dc:Point" x="1008" y="79" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="950" y="58" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_05wq8of_di" bpmnElement="SequenceFlow_05wq8of">
+        <di:waypoint xsi:type="dc:Point" x="480" y="118" />
+        <di:waypoint xsi:type="dc:Point" x="526" y="118" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="487" y="100" width="20" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ExclusiveGateway_0xrpnpu_di" bpmnElement="ExclusiveGateway_0xrpnpu" isMarkerVisible="true">
+        <dc:Bounds x="658" y="92" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="639" y="146" width="90" height="24" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_18iqwz4_di" bpmnElement="SequenceFlow_18iqwz4">
+        <di:waypoint xsi:type="dc:Point" x="366" y="119" />
+        <di:waypoint xsi:type="dc:Point" x="430" y="118" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="353" y="97.5" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0j0j5ps_di" bpmnElement="SequenceFlow_0j0j5ps">
+        <di:waypoint xsi:type="dc:Point" x="626" y="117" />
+        <di:waypoint xsi:type="dc:Point" x="658" y="117" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="597" y="96" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1527j5i_di" bpmnElement="SequenceFlow_1527j5i">
+        <di:waypoint xsi:type="dc:Point" x="683" y="142" />
+        <di:waypoint xsi:type="dc:Point" x="683" y="185" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="690.444452693918" y="151.5964909480441" width="20" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ExclusiveGateway_1rqnqwr_di" bpmnElement="ExclusiveGateway_1rqnqwr" isMarkerVisible="true">
+        <dc:Bounds x="658" y="-38" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="638" y="16" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0qeggtf_di" bpmnElement="SequenceFlow_0qeggtf">
+        <di:waypoint xsi:type="dc:Point" x="683" y="92" />
+        <di:waypoint xsi:type="dc:Point" x="683" y="12" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="689" y="30" width="89" height="36" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0uq3u4y_di" bpmnElement="SequenceFlow_0uq3u4y">
+        <di:waypoint xsi:type="dc:Point" x="708" y="-13" />
+        <di:waypoint xsi:type="dc:Point" x="744" y="-13" />
+        <di:waypoint xsi:type="dc:Point" x="744" y="-13" />
+        <di:waypoint xsi:type="dc:Point" x="779" y="-13" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="714" y="-19" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ExclusiveGateway_19dfdml_di" bpmnElement="ExclusiveGateway_19dfdml" isMarkerVisible="true">
+        <dc:Bounds x="932" y="54" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="912" y="108" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0m51z4b_di" bpmnElement="SequenceFlow_0m51z4b">
+        <di:waypoint xsi:type="dc:Point" x="879" y="210" />
+        <di:waypoint xsi:type="dc:Point" x="957" y="210" />
+        <di:waypoint xsi:type="dc:Point" x="957" y="104" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="873" y="189" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0uas2cs_di" bpmnElement="SequenceFlow_0uas2cs">
+        <di:waypoint xsi:type="dc:Point" x="879" y="-13" />
+        <di:waypoint xsi:type="dc:Point" x="957" y="-13" />
+        <di:waypoint xsi:type="dc:Point" x="957" y="54" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="873" y="-34" width="90" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_0xexjcy_di" bpmnElement="Task_1mo5lkw">
+        <dc:Bounds x="526" y="78" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_19cbg0p_di" bpmnElement="TextAnnotation_19cbg0p">
+        <dc:Bounds x="215" y="4" width="214.99082641991066" height="42.99617102744097" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_18x07ry_di" bpmnElement="Association_18x07ry">
+        <di:waypoint xsi:type="dc:Point" x="440" y="108" />
+        <di:waypoint xsi:type="dc:Point" x="352" y="47" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_0kugadd_di" bpmnElement="Task_0mbvheh">
+        <dc:Bounds x="779" y="170" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1a9fita_di" bpmnElement="TextAnnotation_1a9fita">
+        <dc:Bounds x="729" y="78" width="199" height="56" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_1v1bk48_di" bpmnElement="Association_1v1bk48">
+        <di:waypoint xsi:type="dc:Point" x="706" y="115" />
+        <di:waypoint xsi:type="dc:Point" x="729" y="113" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BoundaryEvent_05u8e6n_di" bpmnElement="BoundaryEvent_1qo7rh9">
+        <dc:Bounds x="569" y="140" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="495" y="180" width="88" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_0l9st2r_di" bpmnElement="ExclusiveGateway_0l9st2r" isMarkerVisible="true">
+        <dc:Bounds x="657.627" y="184.97900000000004" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="682.627" y="238.97900000000004" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0jz3d6h_di" bpmnElement="SequenceFlow_0jz3d6h">
+        <di:waypoint xsi:type="dc:Point" x="587" y="176" />
+        <di:waypoint xsi:type="dc:Point" x="587" y="210" />
+        <di:waypoint xsi:type="dc:Point" x="658" y="210" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="602" y="187" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_14mt1mk_di" bpmnElement="SequenceFlow_14mt1mk">
+        <di:waypoint xsi:type="dc:Point" x="708" y="210" />
+        <di:waypoint xsi:type="dc:Point" x="779" y="210" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="743.5" y="189" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

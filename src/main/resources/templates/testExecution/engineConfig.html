@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+      layout:decorator="layouts/mainLayout">
+
+<head>
+    <title>Layout</title>
+</head>
+<body>
+    <div layout:fragment="content">
+        <h2>BPMN Engine Configuration</h2>
+        <div>
+            <form class="form-horizontal" th:object="${engineconfig}" th:action="@{/saveengineconfig}" method="post">
+                <input type="hidden" th:field="*{engineConfigId}"/>
+                <div class="form-group">
+                    <label class="control-label col-sm-6">BPMN Engine Endpoint:</label>
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" th:field="*{baseUrl}"/>
+                        <label th:if="${#fields.hasErrors('baseUrl')}" th:class="'error'">Engine Config URL Error</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
