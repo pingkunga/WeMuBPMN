@@ -61,9 +61,16 @@ $( document ).ready(function() {
 			},
 			error : function(e) {
 				//tmpResult = "error";
-				waitingDialog.hide();
-				alert("Error!")
-				console.log("ERROR: ", e);
+				setTimeout(function () {
+					waitingDialog.hide();
+				}, 1000);
+				//alert(e.responseText);
+				console.log("ERROR: ", e.responseText);
+				Swal.fire({
+					type: 'error',
+					title: 'error...',
+					text: e.responseText,
+				  })
 			}
 		});
     	

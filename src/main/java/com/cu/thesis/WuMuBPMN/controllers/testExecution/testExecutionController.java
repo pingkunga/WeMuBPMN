@@ -12,8 +12,10 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import com.cu.thesis.WuMuBPMN.services.manageTest.testCaseService;
 import com.cu.thesis.WuMuBPMN.services.mutantGenerator.mutantGeneratorService;
@@ -44,6 +46,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.cu.thesis.WuMuBPMN.GLOBAL_CONST;
 import com.cu.thesis.WuMuBPMN.entities.manageTest.testCase;
 import com.cu.thesis.WuMuBPMN.entities.manageTest.testCaseDetail;
 import com.cu.thesis.WuMuBPMN.entities.mutantGenerator.mutantTestItemDetail;
@@ -51,6 +54,7 @@ import com.cu.thesis.WuMuBPMN.entities.mutantGenerator.mutantTestItemHead;
 import com.cu.thesis.WuMuBPMN.entities.testExecution.engineConfig;
 import com.cu.thesis.WuMuBPMN.entities.testExecution.testResultDetail;
 import com.cu.thesis.WuMuBPMN.entities.testExecution.testResultHead;
+import com.cu.thesis.WuMuBPMN.exceptions.BPMNEngineException;
 
 @Controller
 public class testExecutionController
@@ -200,6 +204,7 @@ public class testExecutionController
         List<testResultDetail> testResultls = new ArrayList<testResultDetail>();
         try{
             //ดึงข้อมูล Config
+            
             engineConfig BPMNEnginConfig = _engineConfigService.listAll().get(0);
             Integer pMutanttestItemId = Integer.parseInt(pParam.get("mutantTestItemId"));
             //testItemId = 155
@@ -211,7 +216,7 @@ public class testExecutionController
 
             //Clear Test Result ของเดิม
             //_testResultService.deleteByTestItemId(testItemId);
-
+            CheckSupportMutationOperator(BPMNMutant.getMutantTestItemDetail());
             //ส่งต่อให้ Service 
             for (mutantTestItemDetail detail : BPMNMutant.getMutantTestItemDetail()) {
                 testResultls.addAll(_testExecutionService.TestMutant(BPMNEnginConfig, detail, testCasels));
@@ -248,7 +253,11 @@ public class testExecutionController
         }
         catch (IOException e) {
             return new ResponseEntity<>(e.getMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST);
-        } catch (Exception e){
+        } 
+        catch (BPMNEngineException e){
+            return new ResponseEntity<>(e.getMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        }
+        catch (Exception e){
             e.printStackTrace();
         }
         //ส่งผลลัพธ์กลับไปที่หน้าจอ
@@ -257,6 +266,21 @@ public class testExecutionController
         testResultls.sort(Comparator.comparing(testResultDetail::getMutantName).thenComparing(testResultDetail::getTestCaseName));
 
         return new ResponseEntity<List<testResultDetail>>(testResultls, new HttpHeaders(), HttpStatus.OK);
+    }
+
+    private void CheckSupportMutationOperator(List<mutantTestItemDetail> pMutantTestItemDetaills) throws BPMNEngineException
+    {
+        List<String> Operatorls = pMutantTestItemDetaills.stream().map(x->x.getOperator()).collect(Collectors.toList());
+        Operatorls = new ArrayList<String>(new HashSet<String>(Operatorls));
+
+        Operatorls.removeAll(GLOBAL_CONST.SUPPORTEXECUTEMUTANTLS);
+
+        if (Operatorls.size() > 0)
+        {
+            String notSupportOperator = Operatorls.stream().collect(Collectors.joining(","));
+            throw new BPMNEngineException("Not Support Mutation Operator " + notSupportOperator);
+        }
+
     }
 
     private void UpdateLastTestCase(mutantTestItemHead BPMNMutant, testResultHead pTestResultHeadEntry)

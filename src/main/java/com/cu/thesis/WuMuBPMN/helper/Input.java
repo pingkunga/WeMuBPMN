@@ -1,14 +1,21 @@
 package com.cu.thesis.WuMuBPMN.helper;
 
 import java.io.BufferedInputStream;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 //import java.util.stream.IntStream;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.ls.LSInput;
 
 public class Input implements LSInput {
+
+    private static final Logger LOGGER=LoggerFactory.getLogger(Input.class);
 
     private String publicId;
 
@@ -44,10 +51,12 @@ public class Input implements LSInput {
 
     public String getStringData() {
         synchronized (inputStream) {
+            String contents = "";
             try {
                 byte[] input = new byte[inputStream.available()];
                 inputStream.read(input);
-                String contents = new String(input);
+                contents = new String(input, StandardCharsets.UTF_8);
+                contents = contents.trim();
                 if (contents.charAt(0) != '<')
                 {
                     contents = contents.substring(1, contents.length());
@@ -56,10 +65,26 @@ public class Input implements LSInput {
             } catch (IOException e) {
                 e.printStackTrace();
                 System.out.println("Exception " + e);
+                LOGGER.debug("getStringData", e);
+                return null;
+            } catch (Exception e){
+                System.out.println("getStringData Exception " + e);
+                LOGGER.debug("getStringData ex", e);
                 return null;
             }
         }
     }
+
+    public static InputStream toUTF8InputStream(String str) {
+        InputStream is = null;
+        try {
+          is = new ByteArrayInputStream(str.getBytes("UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+          // UTF-8 should always be supported
+          throw new AssertionError();
+        }
+        return is;
+      }
     
     public void setBaseURI(String baseURI) {
     }

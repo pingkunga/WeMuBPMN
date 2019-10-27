@@ -124,5 +124,20 @@ public class GLOBAL_CONST {
 
     public static final List<String> METHODVARIABLELS = Collections.unmodifiableList(
                                                                             Arrays.asList(".size()"));
+
+    public static final List<String> SUPPORTEXECUTEMUTANTLS = Collections.unmodifiableList(
+                                                                                Arrays.asList(MUTANT_IVR
+                                                                                            , MUTANT_ITR
+                                                                                            , MUTANT_EAR
+                                                                                            , MUTANT_ERR
+                                                                                            , MUTANT_ELR
+                                                                                            , MUTANT_ETA
+                                                                                            , MUTANT_EDA
+                                                                                            , MUTANT_ERA
+                                                                                            , MUTANT_ECA
+                                                                                            , MUTANT_ACR
+                                                                                            , MUTANT_AAM
+                                                                                            , MUTANT_ARM
+                                                                                            , MUTANT_ALM));
 }
 

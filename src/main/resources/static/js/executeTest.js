@@ -234,7 +234,6 @@ $( document).ready(function() {
 				//$("#result").text(e.responseText);
 				console.log("ERROR : ", e);
 				//$("#btnSubmit").prop("disabled", false);
-	
 			}
 		});
 	}
@@ -267,9 +266,17 @@ $( document).ready(function() {
 			},
 			error : function(e) {
 				//tmpResult = "error";
-				waitingDialog.hide();
-				alert("Error!")
+				setTimeout(function () {
+					waitingDialog.hide();
+				}, 1000);
+				//alert("Error!")
 				console.log("ERROR: ", e);
+				console.log("ERROR: ", e.responseText);
+				Swal.fire({
+					type: 'error',
+					title: 'error...',
+					text: e.responseText,
+				  })
 			}
 		});
     }
