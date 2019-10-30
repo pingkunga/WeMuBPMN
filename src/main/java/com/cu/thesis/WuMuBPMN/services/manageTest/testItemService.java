@@ -14,5 +14,5 @@ public interface testItemService
     boolean findByTestItemName(String pMutantTestItemName);
     boolean findByTestItemPath(String pMutantTestItemPath);
 
-    boolean IsValidBPMN(String pPath);
+    String IsValidBPMN(String pPath);
 }

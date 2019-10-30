@@ -334,6 +334,11 @@ public abstract class mutantGeneratorBase {
                 String TriggerTag = GetTriggerTagId(pSearchTagName, FocusElementId, pMutantTestItem.getBPMNSoureFilePath());
                 NamedNodeMap attributes = elem.getAttributes();
                 Node nodeAttr = attributes.getNamedItem(pSearchAttributeName);
+                if (nodeAttr== null)
+                {
+                    //กรณีที่ BPMN บางอันมี Attribute แต่บางอันไม่มีระบบต้องไม่ Error
+                    continue;
+                }
                 for (String value : pAvaliableValuels) {
                     String currentValue = nodeAttr.getNodeValue();
                     if (currentValue.equals(value))

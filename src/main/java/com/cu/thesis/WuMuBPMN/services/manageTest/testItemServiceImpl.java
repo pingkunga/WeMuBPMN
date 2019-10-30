@@ -19,6 +19,7 @@ import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 
 import com.cu.thesis.WuMuBPMN.entities.manageTest.testItem;
+import com.cu.thesis.WuMuBPMN.exceptions.BPMNEngineException;
 import com.cu.thesis.WuMuBPMN.helper.ResourceResolver;
 import com.cu.thesis.WuMuBPMN.repositories.manageTest.testItemRepository;
 
@@ -37,12 +38,6 @@ public class testItemServiceImpl implements testItemService
 
 	@Value("${bpmn.xsd.path}")     
 	private String BPMNXSDPath;
-
-	@Value("${bpmn.xsd.dipath}")     
-	private String BPMNDIXSDPath;
-	
-	@Value("${bpmn.xsd.semanticpath}")     
-	private String BPMNSEMANTICXSDPath;
 
     private testItemRepository testItemRepo;
 
@@ -103,7 +98,7 @@ public class testItemServiceImpl implements testItemService
 	}
 
 	@Override
-	public boolean IsValidBPMN(String pPath)
+	public String IsValidBPMN(String pPath)
 	{
 		//https://docs.camunda.org/manual/7.5/user-guide/model-api/bpmn-model-api/read-a-model/
 		//รับไฟล์มาก่อน
@@ -131,13 +126,10 @@ public class testItemServiceImpl implements testItemService
 			//Thread.sleep(1000);
 			Validator validator = schema.newValidator();
 			validator.validate(new StreamSource(file));
-		} catch (ModelValidationException  e) {
-			LOGGER.debug("IsValidBPMN >>" + e.getMessage());
-			return false;
 		}  catch (Exception sax) {
 			LOGGER.debug("IsValidBPMN >>" + sax.getMessage());
-			return false;
+			return sax.getMessage();
 		}
-		return true;
+		return "";
 	}
 }
