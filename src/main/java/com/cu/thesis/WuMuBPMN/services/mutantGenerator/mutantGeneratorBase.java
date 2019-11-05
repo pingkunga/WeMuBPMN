@@ -1030,8 +1030,19 @@ public abstract class mutantGeneratorBase {
         Document doc = loadXMLFromFile(pBPMNFile);
 
         // ค้นหา BPMN โดยเริ่มจาก TagName
+        //<bpmn:subProcess
         NodeList nList = doc.getElementsByTagName("bpmn:startEvent");
-        Node BPMNObject = nList.item(0);
+        Node BPMNObject = null;
+        for (int i = 0; i < nList.getLength(); i++) 
+        {
+            BPMNObject = nList.item(i);
+            String parent = BPMNObject.getParentNode().getNodeName();
+            if (!parent.equals("bpmn:subProcess"))
+            {
+                break;
+            }
+        }
+        //BPMNObject = nList.item(0);
         TreeNode<BPMNNodeInfo> root = new TreeNode<>(CreateBPMNNodeInfoFromXMLElement((Element)nList.item(0)));
 
         TreeNode<BPMNNodeInfo> resultTree = BuildTree(doc, BPMNObject, root);

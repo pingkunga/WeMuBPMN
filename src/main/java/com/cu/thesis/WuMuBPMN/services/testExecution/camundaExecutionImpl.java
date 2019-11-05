@@ -49,8 +49,12 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class camundaExecutionImpl implements BPMNEngineExecution {
+
+    private static final Logger LOGGER=LoggerFactory.getLogger(camundaExecutionImpl.class);
 
     private engineConfig config = null;
 
@@ -188,7 +192,7 @@ public class camundaExecutionImpl implements BPMNEngineExecution {
      * 
      * @return
      */
-    public String startProcess(engineConfig pEngineConfig, String key) {
+    public String startProcess(engineConfig pEngineConfig, String key) throws BPMNEngineException {
         CloseableHttpClient client = HttpClients.createDefault();
 
         String TargetUrl = pEngineConfig.getBaseUrl() + "/process-definition/key/{key}/start";
@@ -207,16 +211,18 @@ public class camundaExecutionImpl implements BPMNEngineExecution {
             JSONParser parser = new JSONParser();
             JSONObject deployResult = (JSONObject) parser.parse(resp);
             // Process Instance Id เอาไว้ดูค่าต่างๆ
-            return deployResult.get("id").toString();
+            if (deployResult.containsKey("id"))
+            {
+                return deployResult.get("id").toString();
+            }
+            ConvertEngineException(response);
         } catch (ClientProtocolException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            LOGGER.error("startProcess Error: " + e.getMessage(), e);
+            
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            LOGGER.error("startProcess Error: " + e.getMessage(), e);
         } catch (ParseException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            LOGGER.error("startProcess Error: " + e.getMessage(), e);
         }
 
         return null;

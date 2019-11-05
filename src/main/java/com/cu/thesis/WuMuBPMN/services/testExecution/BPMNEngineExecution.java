@@ -19,7 +19,7 @@ public interface BPMNEngineExecution {
 
     List<String> getProcessInstance(engineConfig pEngineConfig, String pProcessDefinitionKey) throws BPMNEngineException;
     String deployProcess(engineConfig pEngineConfig, mutantTestItemDetail pMutantTestItemDetail);
-    String startProcess(engineConfig pEngineConfig, String key);
+    String startProcess(engineConfig pEngineConfig, String key) throws BPMNEngineException;
     taskDetail getCurrentTask(engineConfig pEngineConfig, String key, String pTaskName) throws BPMNEngineException;
     void completeTask(engineConfig pEngineConfig, String pTaskkey, Map<String, String> pMapVariable) throws UnsupportedEncodingException, BPMNEngineException;
     boolean undeployProcess(engineConfig pEngineConfig, String key) throws ClientProtocolException, IOException;
