@@ -308,7 +308,7 @@ public class testResultServiceImpl implements testResultService {
 
             //parameters.put("logo", getClass().getResourceAsStream(logo_path));
             parameters.put("P_MUTANTTESTITEMID",  pMutantTestItemId);
-            parameters.put("P_BPMNNAME",  testItemEntry.getTestItemName());
+            parameters.put("P_BPMNNAME",  BPMNMutant.getMutantTestItemCode());
 
             JasperPrint print = JasperFillManager.fillReport(report, parameters, conn);
             JasperExportManager.exportReportToPdfFile(print, ExportPath);
