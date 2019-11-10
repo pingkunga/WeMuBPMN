@@ -185,9 +185,15 @@ public class testExecutionController
     }
 
     @RequestMapping(value ="testExecution/testResult/delete", method = RequestMethod.DELETE)
-    public void deleteTestItem(@RequestParam(value = "id", required=false)String id) throws Exception
+    public ResponseEntity<?> deleteTestItem(@RequestParam(value = "id", required=false)String id) throws Exception
     {
-        _testResultService.delete(Integer.parseInt(id));
+        try{
+            _testResultService.delete(Integer.parseInt(id));
+        }
+        catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity<String>("Sucessfuly, Delete test result id " + id, new HttpHeaders(), HttpStatus.OK);
     }
 
     /**

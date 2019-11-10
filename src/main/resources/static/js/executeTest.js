@@ -176,17 +176,25 @@ $( document).ready(function() {
 						event.preventDefault();
 						editrow = row;
 						var dataRecord = $("#testResultGrid").jqxGrid('getrowdata', editrow);
+						console.log(editrow);
 						testResultHeadId = dataRecord.testResultHeadId;
 						//alert(testResultHeadId);
 						console.log(testResultHeadId);
-						
+						var id = $("#testResultGrid").jqxGrid('getrowid', editrow);
+						console.log("JS Remove row id " + id);
+						//for test
+						//var commit = $("#testResultGrid").jqxGrid('deleterow', id);
+						//console.log("Delete Result " + commit);
 						$.ajax({
 							type: "DELETE",
 							url: 'testExecution/testResult/delete?id=' + testResultHeadId,
 							success: function (data) {
 								console.log(data);
-								var selected =  $("#BPMNMutantModel").children("option:selected").val();
-								listTestResult(selected);
+								//Delete row in grid
+								var commit = $("#testResultGrid").jqxGrid('deleterow', id);
+								console.log("Delete Result " + commit);
+								//var selected =  $("#BPMNMutantModel").children("option:selected").val();
+								//listTestResult(selected);
 							},
 							error: function (data) {
 								console.log('Error:', data);
