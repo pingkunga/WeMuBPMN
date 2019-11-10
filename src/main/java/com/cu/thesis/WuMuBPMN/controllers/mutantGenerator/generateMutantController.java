@@ -112,11 +112,13 @@ public class generateMutantController
     }
 
     @RequestMapping(value ="saveGeneratedMutant", method = RequestMethod.POST)
-    public String saveGeneratedMutant(generatedMutantInfo pGeneratedMutantInfo) throws IOException
+    public ResponseEntity<?> saveGeneratedMutant(generatedMutantInfo pGeneratedMutantInfo) throws IOException
     {
         try {
+            CheckDulplicateGenMutant(pGeneratedMutantInfo.getBPMNTestItem()
+                                   , pGeneratedMutantInfo.getWeakNutationLevel());
             List<mutantTestItem> resultls = generateMutant(pGeneratedMutantInfo.getBPMNTestItem()
-                                                     , pGeneratedMutantInfo.getWeakNutationLevel());
+                                                         , pGeneratedMutantInfo.getWeakNutationLevel());
         
             List<mutantTestItemDetail> flatResultls = new ArrayList<mutantTestItemDetail>();
             for (mutantTestItem resultEntry : resultls) {
@@ -127,14 +129,17 @@ public class generateMutantController
             //Redirect ไปหน้าจอ Execute เพื่อให้ User Upload Test Case แล้วทำงาน Run 
         } catch (Exception e) {
             LOGGER.debug(e.getMessage(), e);
+            return new ResponseEntity<>(e.getMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST);
         }
-        return "redirect:/testExecution";
+        //HttpHeaders headers = new HttpHeaders();
+        //headers.add("Location", "/testExecution");
+        //ต้องเป็น 301 HttpStatus.MOVED_PERMANENTLY ถึงจะ Redirect
+        return new ResponseEntity<String>("OK", HttpStatus.OK);
+        //return "redirect:/testExecution";
     }
 
     private List<mutantTestItem> generateMutant(testItem pTestItemEntry, String pWeaKMutationType) throws Exception
     {
-        CheckDulplicateGenMutant(pTestItemEntry, pWeaKMutationType);
-        
         List<String> MutantOpertorls = new ArrayList<String>();
         List<mutantTestItem> result = new ArrayList<>();
         String WeakMutationType = pWeaKMutationType.split("/")[0];

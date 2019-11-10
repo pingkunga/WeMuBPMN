@@ -258,7 +258,7 @@ $( document).ready(function() {
 			url : "testExecution/execute",
 			data : JSON.stringify(formData),
 			dataType : 'json',
-			timeout: 6000000,
+			timeout: 0, //3000 = sets timeout to 3 seconds Otherwise 0 No Timeout
 			success : function(result) {
 				console.log(result);
 				bindTestResultToGrid(result);

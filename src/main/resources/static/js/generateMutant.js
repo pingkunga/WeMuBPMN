@@ -174,4 +174,27 @@ $( document ).ready(function() {
 				}]
 			});
 	}
+
+	$('#generatedMutant').submit(function(e){                                   
+		e.preventDefault();    
+		console.log($('#generatedMutant').serialize());                  
+		$.ajax({
+			type: 'post'
+		  , url: "/saveGeneratedMutant"
+		  , data:  $('#generatedMutant').serialize()
+		  , success: function(returnedData){
+				console.log(returnedData); 
+				//  /testExecution 
+				$(location).attr('href',"/testExecution");
+			}
+		  , error: function(ex) {
+				console.log(ex);
+				Swal.fire({
+					type: 'error',
+					title: 'error...',
+					text: ex.responseText,
+				});
+		    }
+		});
+	});
 })
