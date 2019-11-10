@@ -13,6 +13,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @Entity(name = "testresulthead")
 @Table(name = "testresulthead")
@@ -68,6 +71,12 @@ public class testResultHead {
     public void setTestResultls(List<testResultDetail> pTestResultDetaills)
     {
         this.testResultDetaills.addAll(pTestResultDetaills);
+    }
+
+    @JsonIgnore
+    public List<testResultDetail> getTestResultls()
+    {
+        return this.testResultDetaills;
     }
     /**
      * @return the testResultHeadId

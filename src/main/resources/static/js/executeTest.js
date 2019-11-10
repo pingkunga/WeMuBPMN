@@ -141,7 +141,7 @@ $( document).ready(function() {
 		console.log("new grid previous test " + IsBinding);
 
 		$('#testResultGrid').jqxGrid({
-			width: 380,
+			width: 420,
 			autoheight: true,
 			autorowheight: true,
 			columnsresize: true,
@@ -165,42 +165,74 @@ $( document).ready(function() {
                 datafield: 'executionTime',
                 width: 60
 			}
+			, {
+				text: 'View',
+				datafield: 'button0',
+				columntype: 'button',
+                cellsrenderer: function () {
+					return "View";
+				}
+			  , buttonclick: function (row, event) {
+					//alert("55");
+					//อ่าน Test Result
+					event.preventDefault();
+					editrow = row;
+					var dataRecord = $("#testResultGrid").jqxGrid('getrowdata', editrow);
+					console.log(editrow);
+					testResultHeadId = dataRecord.testResultHeadId;
+
+					$.ajax({
+						type: "GET",
+						url: 'testExecution/testResult/get?id=' + testResultHeadId,
+						success: function (data) {
+							//เอาข้อมูลลง Grid
+							IsBinding = false;
+							bindTestResultToGrid(data);
+							IsBinding = false;
+							console.log("Load Complete");
+						},
+						error: function (data) {
+							console.log('Error:', data);
+						}
+					});
+				}
+			}
 			,{
                 text: 'Delete',
 				datafield: 'button',
 				columntype: 'button',
                 cellsrenderer: function () {
-						return "Delete";
-					 }
-					, buttonclick: function (row, event) {
-						event.preventDefault();
-						editrow = row;
-						var dataRecord = $("#testResultGrid").jqxGrid('getrowdata', editrow);
-						console.log(editrow);
-						testResultHeadId = dataRecord.testResultHeadId;
-						//alert(testResultHeadId);
-						console.log(testResultHeadId);
-						var id = $("#testResultGrid").jqxGrid('getrowid', editrow);
-						console.log("JS Remove row id " + id);
-						//for test
-						//var commit = $("#testResultGrid").jqxGrid('deleterow', id);
-						//console.log("Delete Result " + commit);
-						$.ajax({
-							type: "DELETE",
-							url: 'testExecution/testResult/delete?id=' + testResultHeadId,
-							success: function (data) {
-								console.log(data);
-								//Delete row in grid
-								var commit = $("#testResultGrid").jqxGrid('deleterow', id);
-								console.log("Delete Result " + commit);
-								//var selected =  $("#BPMNMutantModel").children("option:selected").val();
-								//listTestResult(selected);
-							},
-							error: function (data) {
-								console.log('Error:', data);
-							}
-						});
-					}
+					return "Delete";
+				}
+			  , buttonclick: function (row, event) {
+					event.preventDefault();
+					editrow = row;
+					var dataRecord = $("#testResultGrid").jqxGrid('getrowdata', editrow);
+					console.log(editrow);
+					testResultHeadId = dataRecord.testResultHeadId;
+					//alert(testResultHeadId);
+					console.log(testResultHeadId);
+					var id = $("#testResultGrid").jqxGrid('getrowid', editrow);
+					console.log("JS Remove row id " + id);
+					//for test
+					//var commit = $("#testResultGrid").jqxGrid('deleterow', id);
+					//console.log("Delete Result " + commit);
+					$.ajax({
+						type: "DELETE",
+						url: 'testExecution/testResult/delete?id=' + testResultHeadId,
+						success: function (data) {
+						console.log(data);
+						//Delete row in grid
+						var commit = $("#testResultGrid").jqxGrid('deleterow', id);
+						console.log("Delete Result " + commit);
+						//var selected =  $("#BPMNMutantModel").children("option:selected").val();
+						//listTestResult(selected);
+						},
+						error: function (data) {
+							console.log('Error:', data);
+						}
+					});
+				}
 			},
 			]
         });

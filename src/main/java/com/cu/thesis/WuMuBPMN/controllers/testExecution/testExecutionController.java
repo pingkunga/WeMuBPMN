@@ -196,6 +196,23 @@ public class testExecutionController
         return new ResponseEntity<String>("Sucessfuly, Delete test result id " + id, new HttpHeaders(), HttpStatus.OK);
     }
 
+    @RequestMapping(value ="testExecution/testResult/get", method = RequestMethod.GET)
+    public ResponseEntity<?> GetTestResultById(@RequestParam(value = "id", required=false)String id)
+    {
+        List<testResultDetail> testResultls = new ArrayList<testResultDetail>();
+        try{
+            testResultHead testResultHeadEntry = _testResultService.getById(Integer.parseInt(id));
+            testResultls = testResultHeadEntry.getTestResultls();
+        }
+        catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        }
+
+        testResultls.sort(Comparator.comparing(testResultDetail::getMutantName).thenComparing(testResultDetail::getTestCaseName));
+
+        return new ResponseEntity<List<testResultDetail>>(testResultls, new HttpHeaders(), HttpStatus.OK);
+    }
+
     /**
      * Generate Mutant โดยดูตาม Weak Mutant Level
      */
