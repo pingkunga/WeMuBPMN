@@ -121,10 +121,11 @@ public class testItemController
 
             FilePath = SaveBPMNFile(testItemEntry.getBPMNFile(), tmpUploadPath, true);
 
-            String ValidMsg = _testItemService.IsValidBPMN(FilePath);
-            if (ValidMsg.length() > 0)
+            String ErrorMsg = _testItemService.IsValidBPMN(FilePath);
+            if (ErrorMsg.length() > 0)
             {
-                result.rejectValue("testItemName", "error", "Not Valid BPMN File: " + ValidMsg);
+                //result.rejectValue("testItemName", "error", "Not Valid BPMN File: " + ErrorMsg);
+                result.rejectValue("testItemName", "error", "Not Valid BPMN File");
             }
 
             if(result.hasErrors()) {

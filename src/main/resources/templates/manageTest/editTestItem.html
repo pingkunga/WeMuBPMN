@@ -16,7 +16,7 @@
                     <div class="col-sm-10">
                         <input type="text" class="form-control" th:field="*{testItemName}" required />
                         <!-- <label th:if="${#fields.hasErrors('testItemName')}" th:class="'error'">test Item Name Error</label> -->
-                        <span class="error" th:if="${#fields.hasErrors('testItemName')}" th:errors="*{testItemName}"></span>
+                        <span class="text-danger" th:if="${#fields.hasErrors('testItemName')}" th:errors="*{testItemName}"></span>
                     </div>
                 </div>
                 <div class="form-group">
@@ -29,13 +29,13 @@
                     <label class="col-sm-2 control-label">test item path:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" th:field="*{testItemPath}" readonly = true/>
-                        <label th:if="${#fields.hasErrors('testItemPath')}" th:class="'error'">test Item Path Error</label>
+                        <label th:if="${#fields.hasErrors('testItemPath')}" th:class="'text-danger'">test Item Path Error</label>
                     </div>
-                    <div>Summary Error
+                    <!-- <div>Summary Error
                         <ul>
-                            <li th:each="err : ${#fields.errors('*')}" th:text="${err}" />
+                            <li th:each="err : ${#fields.errors('*')}" th:text="${err}" th:class="'text-danger'"></li>
                         </ul>
-                    </div>
+                    </div> -->
                   
                 </div>
                 <div class="form-group">
