@@ -49,9 +49,42 @@ $( document).ready(function() {
 		
 		mutantTestItemId = $("#BPMNMutantModel").children("option:selected").val();
 		console.log(mutantTestItemId);
+		if (mutantTestItemId === "") {
+			Swal.fire({
+				type: 'error',
+				title: 'error...',
+				text: 'Please Selected BPMN Mutant Test Item',
+			  })
+		}
+		else
+		{
+			window.open('/testExecution/generateTestResultReport?id='+mutantTestItemId);
+		}
+		// var mututantTestItemId = $("#BPMNMutantModel").children("option:selected").val();
+		// $.get('/testExecution/generateTestResultReport', 'id=' + mututantTestItemId, function(data) {
+		// 	console.log("Generate Success");
+		// });
+	});
 
-		window.open('/testExecution/generateTestResultReport?id='+mutantTestItemId);
-
+	$("#downloadGeneratedMutant").click(function(event) {
+		// Prevent the form from submitting via the browser.
+		event.preventDefault();
+		
+		mutantTestItemId = $("#BPMNMutantModel").children("option:selected").val();
+		
+		console.log(mutantTestItemId);
+		if (mutantTestItemId === "") {
+			Swal.fire({
+				type: 'error',
+				title: 'error...',
+				text: 'Please Selected BPMN Mutant Test Item',
+			  })
+		}
+		else
+		{
+			//http://localhost:8090/testExecution/DownloadGenerateMutant?id=8872&code=Test
+			window.open('/testExecution/DownloadGenerateMutant?id='+mutantTestItemId);
+		}
 		// var mututantTestItemId = $("#BPMNMutantModel").children("option:selected").val();
 		// $.get('/testExecution/generateTestResultReport', 'id=' + mututantTestItemId, function(data) {
 		// 	console.log("Generate Success");
@@ -274,6 +307,11 @@ $( document).ready(function() {
 				//$("#result").text(e.responseText);
 				console.log("ERROR : ", e);
 				//$("#btnSubmit").prop("disabled", false);
+				Swal.fire({
+					type: 'error',
+					title: 'error...',
+					text: 'Invalid Test Case',
+				  })
 			}
 		});
 	}

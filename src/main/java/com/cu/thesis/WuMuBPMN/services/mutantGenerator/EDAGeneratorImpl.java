@@ -87,6 +87,14 @@ public class EDAGeneratorImpl extends mutantGeneratorBase implements mutantGener
         //ตรวจสอบก่อนว่าเป็น ISO8601 กลุ่ม Duration หรือไม่
         if (!IsISO8601DateTime(pOriginalValue))
         {
+            int startpos = pOriginalValue.indexOf("{");
+            int endpos = pOriginalValue.indexOf("}");
+            
+            if ((startpos != -1) && (endpos != -1))
+            {
+                String raw = pOriginalValue.substring(startpos + 1, endpos);
+                return "${" + raw + " - 1 }";
+            }
             return pOriginalValue;
         }
 

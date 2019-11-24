@@ -1,6 +1,9 @@
 package com.cu.thesis.WuMuBPMN.controllers.testExecution;
 
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.CopyOption;
 import java.nio.file.Files;
@@ -16,6 +19,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
+
+import javax.servlet.http.HttpServletResponse;
 
 import com.cu.thesis.WuMuBPMN.services.manageTest.testCaseService;
 import com.cu.thesis.WuMuBPMN.services.mutantGenerator.mutantGeneratorService;
@@ -25,6 +32,7 @@ import com.cu.thesis.WuMuBPMN.services.testExecution.testResultService;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.IOUtils;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.apache.xmlbeans.impl.tool.XSTCTester.TestCaseResult;
@@ -335,6 +343,77 @@ public class testExecutionController
             e.printStackTrace();
             throw e;
         }
+    }
+
+    @RequestMapping(value ="testExecution/DownloadGenerateMutant", method = RequestMethod.GET)
+    public ResponseEntity<byte[]> DownloadGenerateMutant(@RequestParam(value = "id", required=false) String id) 
+    {
+        //Create Zip
+        
+        String tempFileName =  "ExportMutant.zip";
+        //response.addHeader("Content-Disposition", "attachment; filename=\"" + tempFileName + "\"");
+        Integer mutanttestItemId = Integer.parseInt(id);
+        byte[] bytes = null;
+        try { 
+            mutantTestItemHead BPMNMutant = _mutantGeneratorService.getById(mutanttestItemId);
+            tempFileName = BPMNMutant.getMutantTestItemCode() + ".zip";
+            bytes = CreateZipGeneratedMutant(BPMNMutant);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return ResponseEntity.ok()
+                            // Specify content type as PDF
+                            .header("Content-Type", "application/pdf; charset=UTF-8")
+                            // Tell browser to display PDF if it can
+                            //.header("Content-Disposition", "inline;filename=testResult.pdf")
+                            .header("Content-Disposition", "attachment; filename=\"" + tempFileName + "\"")
+                            .body(bytes);
+    }
+
+    //https://stackoverflow.com/questions/55468163/how-to-get-zip-file-as-an-response-in-java-spring-boot
+    public byte[] CreateZipGeneratedMutant(mutantTestItemHead pBPMNMutant) throws IOException
+    {
+        //Integer pMutanttestItemId = Integer.parseInt(pParam.get("mutantTestItemId"));
+        //testItemId = 155
+    
+
+        List<String> GeneratedMutantFilePathls = pBPMNMutant.getMutantTestItemDetail()
+                                                            .stream()
+                                                            .map(x->x.getMutantBPMNPath())
+                                                            .collect(Collectors.toList());
+      
+         //creating byteArray stream, make it bufferable and passing this buffer to ZipOutputStream
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        //BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(byteArrayOutputStream);
+        //ZipOutputStream zipOutputStream = new ZipOutputStream(bufferedOutputStream);
+
+        try (ZipOutputStream zipOutputStream = new ZipOutputStream(new BufferedOutputStream(byteArrayOutputStream))){
+            //ใส่ File ลงใน Zip
+            //packing files
+            for (String Mutant : GeneratedMutantFilePathls) {
+            //new zip entry and copying inputstream with file to zipOutputStream, then closing streams
+                File file = new File(Mutant);
+                zipOutputStream.putNextEntry(new ZipEntry(file.getName()));
+                FileInputStream fileInputStream = new FileInputStream(file);
+    
+                IOUtils.copy(fileInputStream, zipOutputStream);
+    
+                fileInputStream.close();
+                zipOutputStream.closeEntry();
+            }
+
+            //Return ZipByte
+            if (zipOutputStream != null)
+            {
+                zipOutputStream.finish();
+                zipOutputStream.flush();
+                //IOUtils.closeQuietly(zipOutputStream);
+            }
+            //IOUtils.closeQuietly(bufferedOutputStream);
+            //IOUtils.closeQuietly(byteArrayOutputStream);
+        }
+        return byteArrayOutputStream.toByteArray();
     }
 
     //@RequestMapping(value ="textExecution/generateTestResultReport", method = RequestMethod.POST, produces =  "application/pdf")

@@ -1,11 +1,11 @@
 $( document ).ready(function() {
-	var IsBinding = false;
+	var IsBindingGen = false;
 
 	$(window).bind("load", function() {
 		// code here
 		console.log("Initial Generate Test Result");
 		var dataGrid = null;
-		IsBinding = true;
+		IsBindingGen = true;
 		bindGenerateMutantResultToGrid(dataGrid);
 	});
 
@@ -56,7 +56,9 @@ $( document ).ready(function() {
 				// }
 				console.log(result);
 				bindGenerateMutantResultToGrid(result);
-				waitingDialog.hide();
+				setTimeout(function () {
+					waitingDialog.hide();
+				}, 1000);
 
 			},
 			error : function(e) {
@@ -126,19 +128,19 @@ $( document ).ready(function() {
 		//Create Data Source
 		var dataAdapter = new $.jqx.dataAdapter(source);
 		//Check ว่ามีข้อมูลใหม่ใน Grid หรือป่าว
-		if (IsBinding === true) {
+		if (IsBindingGen === true) {
 			// jqGrid exist
-			console.log("reload grid" + IsBinding);
+			console.log("reload grid" + IsBindingGen);
 			// passing "cells" to the 'updatebounddata' method will refresh only the cells values when the new rows count is equal to the previous rows count.
 			//$("#mutantTreeGrid").jqxTreeGrid('updatebounddata', 'cells');
 			//$("#mutantTreeGrid").trigger("reloadGrid");
 			$("#mutantTreeGrid").jqxTreeGrid('destroy');
 			$('#mutantTreeGridContainer').after('<div id = "mutantTreeGrid" class="row justify-content-center"></div>');
-			IsBinding = false;
+			IsBindingGen = false;
 		}
 
-		IsBinding = true;
-		console.log("new grid" + IsBinding);
+		IsBindingGen = true;
+		console.log("new grid" + IsBindingGen);
 		
 
 		//Create Tree Grid
