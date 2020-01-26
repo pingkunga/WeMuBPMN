@@ -65,7 +65,7 @@ public class testExecutionServiceImpl implements testExecutionService {
                 // 02-Start Process
                 String processInstanceId = executor.startProcess(config, pMutantDetail.getGenFileName());
                 // ถ้าเป็น Timer Start Event ต้อง Loop 2 รอบ
-                List<String> scheduleProcess = executor.getProcessInstance(config, pMutantDetail.getGenFileName());
+                //List<String> scheduleProcess = executor.getProcessInstance(config, pMutantDetail.getGenFileName());
                 List<String> passedProcessInstanceId = new ArrayList<String>(); // ใช้ในกรณีที่เป็น Timer Start Event
                 for (testCaseDetail testCaseDetailEntry : testCasEntry.getTestCaseDetail()) {
 
@@ -192,6 +192,8 @@ public class testExecutionServiceImpl implements testExecutionService {
                 // Clear Process
                 testResultEntry.setResult(GLOBAL_CONST.RESULT_KILLED);
                 testResultEntry.setRemark(e.getMessage());
+                testResultEntry.setEndTime(new Date());
+                testResultEntry.setExecutionTime();
                 testResultls.add(testResultEntry);
                 executor.undeployProcess(config, deploymentKey);
             } catch (Exception e1) {

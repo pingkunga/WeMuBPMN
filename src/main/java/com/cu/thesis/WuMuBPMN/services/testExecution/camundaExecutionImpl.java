@@ -207,15 +207,20 @@ public class camundaExecutionImpl implements BPMNEngineExecution {
 
         try {
             CloseableHttpResponse response = client.execute(httpPost);
-            String resp = EntityUtils.toString(response.getEntity());
-            JSONParser parser = new JSONParser();
-            JSONObject deployResult = (JSONObject) parser.parse(resp);
-            // Process Instance Id เอาไว้ดูค่าต่างๆ
-            if (deployResult.containsKey("id"))
-            {
-                return deployResult.get("id").toString();
+            if (IsRequestSuccess(response)) {
+                String resp = EntityUtils.toString(response.getEntity());
+                JSONParser parser = new JSONParser();
+                JSONObject deployResult = (JSONObject) parser.parse(resp);
+                // Process Instance Id เอาไว้ดูค่าต่างๆ
+                if (deployResult.containsKey("id"))
+                {
+                    return deployResult.get("id").toString();
+                }
             }
-            ConvertEngineException(response);
+            else
+            {
+                ConvertEngineException(response);
+            }
         } catch (ClientProtocolException e) {
             LOGGER.error("startProcess Error: " + e.getMessage(), e);
             
