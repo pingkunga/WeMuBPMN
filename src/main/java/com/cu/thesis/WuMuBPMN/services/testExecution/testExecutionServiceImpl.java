@@ -1,6 +1,14 @@
 package com.cu.thesis.WuMuBPMN.services.testExecution;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.net.URL;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -39,10 +47,6 @@ public class testExecutionServiceImpl implements testExecutionService {
     private static final Logger LOGGER=LoggerFactory.getLogger(testExecutionServiceImpl.class);
 
     private BPMNEngineExecution executor;
-
-    public void TestOriginal() {
-
-    }
 
     public List<testResultDetail> TestMutant(engineConfig config, mutantTestItemDetail pMutantDetail,
             List<testCase> pTestCasels) {
@@ -196,6 +200,7 @@ public class testExecutionServiceImpl implements testExecutionService {
                 testResultEntry.setExecutionTime();
                 testResultls.add(testResultEntry);
                 executor.undeployProcess(config, deploymentKey);
+                ClearTmp();
             } catch (Exception e1) {
             } 
         }
@@ -234,6 +239,54 @@ public class testExecutionServiceImpl implements testExecutionService {
                 return false;
             }
             return false;
+        }
+    }
+
+    private void ClearTmp() {
+        //Check Server Exist
+        if (pingHost("localhost", 3000, 1000))
+        {
+            try
+            { 
+                String urlStr = "http://localhost:3000/tmp/1";
+                
+                URL url = new URL(urlStr.trim());
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setDoOutput(true);
+                conn.setRequestMethod("PUT");
+                conn.setRequestProperty("Content-Type", "application/json");
+
+                String input =  "{\"counta\":1}";
+
+                // OutputStream os = conn.getOutputStream();
+                // os.write(input.getBytes());
+                // os.flush();
+
+                OutputStreamWriter out = new OutputStreamWriter(conn.getOutputStream());
+                out.write(input);
+                out.close();
+            
+                BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                String response = "";
+                String buffer;
+                while ((buffer = in.readLine()) != null) {
+                    response += buffer;
+                }
+                in.close();
+            }
+            catch(Exception ex)
+            {
+                System.out.print(ex.getMessage());
+            }
+        }
+    }
+
+    public static boolean pingHost(String host, int port, int timeout) {
+        try (Socket socket = new Socket()) {
+            socket.connect(new InetSocketAddress(host, port), timeout);
+            return true;
+        } catch (IOException e) {
+            return false; // Either timeout or unreachable or failed DNS lookup.
         }
     }
 
