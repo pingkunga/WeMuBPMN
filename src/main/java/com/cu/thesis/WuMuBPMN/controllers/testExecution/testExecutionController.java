@@ -25,6 +25,7 @@ import java.util.zip.ZipOutputStream;
 import javax.servlet.http.HttpServletResponse;
 
 import com.cu.thesis.WuMuBPMN.services.manageTest.testCaseService;
+import com.cu.thesis.WuMuBPMN.services.manageTest.testItemService;
 import com.cu.thesis.WuMuBPMN.services.mutantGenerator.mutantGeneratorService;
 import com.cu.thesis.WuMuBPMN.services.testExecution.engineConfigService;
 import com.cu.thesis.WuMuBPMN.services.testExecution.testExecutionService;
@@ -57,6 +58,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.cu.thesis.WuMuBPMN.GLOBAL_CONST;
 import com.cu.thesis.WuMuBPMN.entities.manageTest.testCase;
 import com.cu.thesis.WuMuBPMN.entities.manageTest.testCaseDetail;
+import com.cu.thesis.WuMuBPMN.entities.manageTest.testItem;
 import com.cu.thesis.WuMuBPMN.entities.mutantGenerator.mutantTestItemDetail;
 import com.cu.thesis.WuMuBPMN.entities.mutantGenerator.mutantTestItemHead;
 import com.cu.thesis.WuMuBPMN.entities.testExecution.engineConfig;
@@ -87,6 +89,9 @@ public class testExecutionController
 
     @Autowired
     private testCaseService _testCaseService;
+
+    @Autowired
+    private testItemService _testItemService;
     
     @RequestMapping(value = "testExecution", method = RequestMethod.GET)
     public String testExecution(ModelMap model)
@@ -101,10 +106,18 @@ public class testExecutionController
 
     @RequestMapping(value = "testExecution/uploadTestCase", method = RequestMethod.POST)
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile uploadfile
-                                           , @RequestParam("mutantTestItemId") int testItemId) 
+                                           , @RequestParam("mutantTestItemId") int testItemId
+                                           , @RequestParam("mode") String mode) 
     {
         try {
-            UpdateLoadTestCase(uploadfile, testItemId);
+            if (mode.equals("MUTANT"))
+            {
+                UpdateLoadTestCase(uploadfile, testItemId);
+            }
+            else
+            {
+                UpdateLoadTestCaseForOriginal(uploadfile, testItemId);
+            }
 
         } catch (IOException e) {
             return new ResponseEntity<String>(e.getMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST);
@@ -116,9 +129,9 @@ public class testExecutionController
         return new ResponseEntity<String>("Successfully uploaded - " + uploadfile.getOriginalFilename(), new HttpHeaders(), HttpStatus.OK);
 
     }
+
     private void UpdateLoadTestCase(MultipartFile pUploadfile, int pTestItemId) throws Exception
     {
-        
         if (pUploadfile.isEmpty()) {
             throw new FileUploadException("Not valid Test Case Extension");
         }
@@ -136,6 +149,22 @@ public class testExecutionController
             throw new FileUploadException("Please Review your test case");
         }
 
+    }
+
+    private void UpdateLoadTestCaseForOriginal(MultipartFile pUploadfile, int pTestItemId)  throws Exception
+    {
+        if (pUploadfile.isEmpty()) {
+            throw new FileUploadException("Not valid Test Case Extension");
+        }
+
+        String testCaseUploadPath = uploadPath + "\\" + pTestItemId;
+        String testCasePath = SaveTestCaseFile(pUploadfile, testCaseUploadPath);
+
+        List<testCase> tcls = _testCaseService.ReadExcelTestCase(testCasePath);
+        if (tcls.size() == 0)
+        {
+            throw new FileUploadException("Please Review your test case");
+        }
     }
 
     protected String SaveTestCaseFile(MultipartFile file, String uploadDirectory) throws IOException, FileUploadException
@@ -216,6 +245,80 @@ public class testExecutionController
             return new ResponseEntity<>(e.getMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST);
         }
 
+        testResultls.sort(Comparator.comparing(testResultDetail::getMutantName).thenComparing(testResultDetail::getTestCaseName));
+
+        return new ResponseEntity<List<testResultDetail>>(testResultls, new HttpHeaders(), HttpStatus.OK);
+    }
+
+    @RequestMapping(value ="testExecution/executeOriginal", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> excuteTestOriginal(@RequestBody Map<String, String> pParam)
+    {
+        testResultHead testResultHeadEntry = new testResultHead();
+        List<testResultDetail> testResultls = new ArrayList<testResultDetail>();
+        try{
+            //ดึงข้อมูล Config
+            
+            engineConfig BPMNEnginConfig = _engineConfigService.listAll().get(0);
+            Integer pMutanttestItemId = Integer.parseInt(pParam.get("mutantTestItemId"));
+            //testItemId = 155
+            mutantTestItemHead BPMNMutant = _mutantGeneratorService.getById(pMutanttestItemId);
+            String testCaseUploadPath = uploadPath + "\\" + BPMNMutant.getTestItemId();
+            //ดึงข้อมูล Test Case
+            List<testCase> testCasels = _testCaseService.ReadExcelTestCase(testCaseUploadPath);
+            //List<testCase> testCasels = GetTestCasefromFile(null);
+
+            //Clear Test Result ของเดิม
+            //_testResultService.deleteByTestItemId(testItemId);
+            //CheckSupportMutationOperator(BPMNMutant.getMutantTestItemDetail());
+
+            //แปลง TestItem ให้ไปเป็น mutantTestItemDetail จะได้เข้าตาม Flow เดิมง่ายๆ 
+            testItem testItemEntry = _testItemService.getById(BPMNMutant.getTestItemId());
+            mutantTestItemDetail detail = new mutantTestItemDetail();
+            detail.setGenFileName(testItemEntry.getTestItemName());
+            detail.setMutantBPMNPath(testItemEntry.getTestItemPath());
+            testResultls.addAll(_testExecutionService.TestOriginal(BPMNEnginConfig, detail, testCasels));
+
+            //Update testItemId และ Update ผสลลัพธ์ลง DB
+            for (testResultDetail testResultEntry : testResultls) {
+                testResultEntry.setMutantTestItemId(pMutanttestItemId);
+                testResultEntry.setTestResultHeadEntry(testResultHeadEntry);
+                //_testResultService.save(testResultEntry);
+            }
+            
+            // Date minDate = testResultls.stream().map(testResultDetail::getStartTime).min(Date::compareTo).get();
+            // Date maxDate = testResultls.stream().map(testResultDetail::getEndTime).max(Date::compareTo).get();
+            // testResultHeadEntry.setTestStart(minDate);
+            // testResultHeadEntry.setTestFinish(maxDate);
+
+            // int executionTime =  Seconds.secondsBetween(new DateTime(testResultHeadEntry.getTestStart()), new DateTime(testResultHeadEntry.getTestFinish())).getSeconds();
+            // testResultHeadEntry.setExecutionTime(executionTime);
+
+            // testResultHeadEntry.setMutantTestItemId(pMutanttestItemId);
+
+            // testResultHeadEntry.setMutationScore(_testResultService.CalcMutationScore(testResultls));
+            // testResultHeadEntry.setTestEffectiveness(_testResultService.CalcTestEffectiveness(testCasels, testResultls));
+            // testResultHeadEntry.setTestResultls(testResultls);
+            // //Copy Test Case
+            // //Rename มัน
+            // testResultHeadEntry = _testResultService.save(testResultHeadEntry);
+
+            // UpdateLastTestCase(BPMNMutant, testResultHeadEntry);
+       
+        } catch (FileUploadException e) {
+            return new ResponseEntity<>(e.getMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        }
+        catch (IOException e) {
+            return new ResponseEntity<>(e.getMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        } 
+        catch (BPMNEngineException e){
+            return new ResponseEntity<>(e.getMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        //ส่งผลลัพธ์กลับไปที่หน้าจอ
+        //https://stackoverflow.com/questions/4805606/how-to-sort-by-two-fields-in-java
+        //testResultls
         testResultls.sort(Comparator.comparing(testResultDetail::getMutantName).thenComparing(testResultDetail::getTestCaseName));
 
         return new ResponseEntity<List<testResultDetail>>(testResultls, new HttpHeaders(), HttpStatus.OK);

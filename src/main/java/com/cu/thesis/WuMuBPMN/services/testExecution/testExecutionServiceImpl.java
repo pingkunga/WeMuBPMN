@@ -48,6 +48,143 @@ public class testExecutionServiceImpl implements testExecutionService {
 
     private BPMNEngineExecution executor;
 
+    public List<testResultDetail> TestOriginal(engineConfig config
+                                             , mutantTestItemDetail pOriginal
+                                             , List<testCase> pTestCasels)
+    {
+        List<testResultDetail> testResultls = new ArrayList<testResultDetail>();
+        BPMNEngineExecution executor = CreateEngineExcution("CAMUNDA", config);
+        String deploymentKey = "";
+        testResultDetail testResultEntry = null;
+        try {
+            for (testCase testCasEntry : pTestCasels) {
+                testResultEntry = new testResultDetail();
+                testResultEntry.setMutantName(pOriginal.getGenFileName());
+                testResultEntry.setStartTime(new Date());
+                testResultEntry.setTestCaseName(testCasEntry.getTestCaseName());
+                // testResultEntry.setOriginal(pOriginal.getOriginalStatement());
+                // testResultEntry.setMutant(pOriginal.getMutantStatement());
+                // testResultEntry.setMutationOperator(pOriginal.getOperator());
+                // 01-Deploy Process
+                deploymentKey = executor.deployProcess(config, pOriginal);
+                // 02-Start Process
+                String processInstanceId = executor.startProcess(config, pOriginal.getGenFileName());
+                // ถ้าเป็น Timer Start Event ต้อง Loop 2 รอบ
+                //List<String> scheduleProcess = executor.getProcessInstance(config, pMutantDetail.getGenFileName());
+                List<String> passedProcessInstanceId = new ArrayList<String>(); // ใช้ในกรณีที่เป็น Timer Start Event
+                for (testCaseDetail testCaseDetailEntry : testCasEntry.getTestCaseDetail()) {
+
+                    try {
+                        if (testCaseDetailEntry.getTaskName().toLowerCase().equals("start")
+                                || testCaseDetailEntry.getTaskName().toLowerCase().equals("end")) {
+                            continue;
+                        }
+                        // 03-Execute follow testCaseDetailEntry
+                        taskDetail currentTask = executor.getCurrentTask(config, processInstanceId,
+                                testCaseDetailEntry.getTaskName());
+
+                        LocalDateTime startCompleteTaskTime = LocalDateTime.now();
+                        // เพิ่มการ Get Exception
+                        if (!(testCaseDetailEntry.getWaitTime() == null
+                                || testCaseDetailEntry.getWaitTime().isEmpty())) {
+                            // if (GLOBAL_CONST.TIMEDELAYOPEREATORLS.contains(pMutantDetail.getOperator()))
+                            // {
+                            // //ต้องหน่วงเวลา
+                            // WaitForTime(pMutantDetail.getMutantStatement());
+                            // //testResultEntry.setResult(GLOBAL_CONST.RESULT_KILLED);
+                            // testResultEntry.setRemark("Wait for " + pMutantDetail.getMutantStatement());
+                            // }
+                            WaitForTime(testCaseDetailEntry.getWaitTime());
+                            // testResultEntry.setResult(GLOBAL_CONST.RESULT_KILLED);
+                            testResultEntry.setRemark("Wait for " + testCaseDetailEntry.getWaitTime());
+                        }
+                        executor.completeTask(config, currentTask.getTaskId(), testCaseDetailEntry.getTestInput());
+                        LocalDateTime endCompleteTaskTime = LocalDateTime.now();
+
+                        // 04-Check Result (ระวังเคส END)
+                        if (testCaseDetailEntry.getExpectedTask().toLowerCase().equals("end")) {
+                            // ถ้า Task ถัดไปไม่มีให้ไปดูที่เป็น Timer Start Event หรือป่าว
+                            if (testCasEntry.getTestCaseDetail().get(0).getTaskName().toLowerCase()
+                                    .equals("timer start")) {
+                                if ((testCaseDetailEntry.getWaitTime() == null
+                                        || testCaseDetailEntry.getWaitTime().isEmpty())) {
+                                    break;
+                                }
+                                WaitForTime(testCaseDetailEntry.getWaitTime());
+                                // testResultEntry.setResult(GLOBAL_CONST.RESULT_KILLED);
+                                testResultEntry.setRemark("Wait for " + testCaseDetailEntry.getWaitTime());
+                                passedProcessInstanceId.add(processInstanceId);
+                                List<String> resultls = executor.getProcessInstance(config,
+                                    pOriginal.getGenFileName());
+                                resultls.removeAll(passedProcessInstanceId);
+                                if (resultls.size() > 0) {
+                                    // เอา Process Id ใหม่มา
+                                    processInstanceId = resultls.get(0);
+                                    continue;
+                                } else {
+                                    break;
+                                }
+
+                            }
+                            break;
+                        }
+
+                        taskDetail nextTask = executor.getCurrentTask(config, processInstanceId,
+                                testCaseDetailEntry.getExpectedTask());
+
+                        // 05-Update TestResult
+                        // ถ้าเส้นทางที่ไป Task Result ไม่เหมือนกันแสดงว่า Killed
+                        if (!testCaseDetailEntry.getExpectedTask().equals(nextTask.getTaskName())) {
+                            // ไปผิดทางแล้ว
+                            // Case ที่เป็นไปได้ Mutant ถูก Kill
+                            //testResultEntry.setResult(GLOBAL_CONST.RESULT_KILLED);
+                            testResultEntry.setResult("FAIL");
+                            testResultEntry.setRemark("Expected Result is " + testCaseDetailEntry.getExpectedTask()
+                                    + ", but Actual Result is " + nextTask.getTaskName());
+                            break;
+                        } 
+                    } catch (Exception ex) {
+                        //testResultEntry.setResult(GLOBAL_CONST.RESULT_KILLED);
+                        testResultEntry.setResult("FAIL");
+                        testResultEntry.setRemark(ex.getMessage());
+                        break;
+                    } finally {
+                        if ((testResultEntry.getResult() == null) || (testResultEntry.getResult().length() == 0)) {
+                            // testResultEntry.setResult(GLOBAL_CONST.RESULT_NOT_EXERCISE);
+                            // ถาม อาจารย์ 2019-06-06 ถ้าไม่ผ่าน Test Case นี้ Live
+                            testResultEntry.setResult("PASS");
+                            // testResultEntry.setRemark(GLOBAL_CONST.RESULT_NOT_EXERCISE);
+                        }
+                    }
+
+                }
+                // 07-Evaluate Non Expression
+                // มาดูผลลัพธ์ - จะได้ Test Result หลายอัน
+                TimeUnit.SECONDS.sleep(1);
+                executor.undeployProcess(config, deploymentKey);
+                testResultEntry.setEndTime(new Date());
+                testResultEntry.setExecutionTime();
+                testResultls.add(testResultEntry);
+            }
+        }catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            LOGGER.error("Execute Error: " + e.getMessage(), e);
+            try {
+                // Clear Process
+                testResultEntry.setResult(GLOBAL_CONST.RESULT_KILLED);
+                testResultEntry.setRemark(e.getMessage());
+                testResultEntry.setEndTime(new Date());
+                    testResultEntry.setExecutionTime();
+                    testResultls.add(testResultEntry);
+                    executor.undeployProcess(config, deploymentKey);
+                    ClearTmp();
+            } catch (Exception e1) {
+            } 
+        }
+        return testResultls;
+    }
+
     public List<testResultDetail> TestMutant(engineConfig config, mutantTestItemDetail pMutantDetail,
             List<testCase> pTestCasels) {
         // Get Engine Config
@@ -97,7 +234,11 @@ public class testExecutionServiceImpl implements testExecutionService {
                             // testResultEntry.setResult(GLOBAL_CONST.RESULT_KILLED);
                             testResultEntry.setRemark("Wait for " + testCaseDetailEntry.getWaitTime());
                         }
-                        executor.completeTask(config, currentTask.getTaskId(), testCaseDetailEntry.getTestInput());
+                        else
+                        {
+                            executor.completeTask(config, currentTask.getTaskId(), testCaseDetailEntry.getTestInput());
+                        }
+                        
                         LocalDateTime endCompleteTaskTime = LocalDateTime.now();
 
                         // 04-Check Result (ระวังเคส END)
@@ -307,6 +448,10 @@ public class testExecutionServiceImpl implements testExecutionService {
             //Convert ISO
             TimeUnit.SECONDS.sleep(parseDuration.getSeconds());
             //Thread.sleep(parseDuration.getSeconds());
+
+            //หน่วงเพิ่ม เพื่อรอ network ด้วย 
+            //Ref https://forum.camunda.org/t/timer-execution-too-slow/743
+            TimeUnit.SECONDS.sleep(61);
         }
         catch(InterruptedException ex)
         {

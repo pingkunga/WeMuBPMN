@@ -13,5 +13,7 @@ public interface testExecutionService
     // testItem getById(Integer id);
     // testItem save(testItem testItemEntry);
     // void delete(Integer id);
+    List<testResultDetail> TestOriginal(engineConfig config, mutantTestItemDetail pOriginal, List<testCase> pTestCasels);
+    
     List<testResultDetail> TestMutant(engineConfig config, mutantTestItemDetail pMutantDetail, List<testCase> pTestCasels);
 }
