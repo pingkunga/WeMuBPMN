@@ -13,6 +13,7 @@ import javax.validation.Valid;
 import com.cu.thesis.WuMuBPMN.entities.manageTest.testItem;
 import com.cu.thesis.WuMuBPMN.entities.mutantGenerator.mutantTestItemHead;
 import com.cu.thesis.WuMuBPMN.services.manageTest.testItemService;
+import com.cu.thesis.WuMuBPMN.services.mutantGenerator.mutantGeneratorBase;
 import com.cu.thesis.WuMuBPMN.services.mutantGenerator.mutantGeneratorService;
 import com.cu.thesis.WuMuBPMN.services.testExecution.testResultService;
 
@@ -30,6 +31,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
 
 @Controller
 public class testItemController
@@ -116,7 +119,7 @@ public class testItemController
                 result.rejectValue("testItemName", "error", "Duplicate test Item Name");
             }
 
-            FilePath = SaveBPMNFile(testItemEntry.getBPMNFile(), tmpUploadPath, true);
+            FilePath = SaveBPMNFile(testItemEntry.getBPMNFile(), tmpUploadPath, testItemEntry.getTestItemName(), true);
 
             String ErrorMsg = _testItemService.IsValidBPMN(FilePath);
             if (ErrorMsg.length() > 0)
@@ -132,7 +135,7 @@ public class testItemController
 
             if (testItemEntry.getTestItemPath().isEmpty())
             {
-                FilePath = SaveBPMNFile(testItemEntry.getBPMNFile(), uploadPath, false);
+                FilePath = SaveBPMNFile(testItemEntry.getBPMNFile(), uploadPath, testItemEntry.getTestItemName(), false);
                 testItemEntry.setTestItemPath(FilePath);
             }
             _testItemService.save(testItemEntry);
@@ -152,19 +155,35 @@ public class testItemController
         return "redirect:/testitems";
     }
 
-    protected String SaveBPMNFile(MultipartFile file, String uploadDirectory, boolean pDeletedBeforeSave) throws IOException, FileUploadException
+    protected String SaveBPMNFile(MultipartFile file, String uploadDirectory, String fileName, boolean pDeletedBeforeSave) throws IOException, FileUploadException
     {
-      String fileName = file.getOriginalFilename();
+      //String fileName = file.getOriginalFilename();
+      String fileNameExt = fileName + ".bpmn";
       CheckValidFileExtension(file);
-      Path path = Paths.get(uploadDirectory, fileName);
+      Path path = Paths.get(uploadDirectory, fileNameExt);
       if (pDeletedBeforeSave)
       {
         Files.deleteIfExists(path); //surround it in try catch block
       }
       Files.copy(file.getInputStream(), path);
 
-      return uploadDirectory +"\\"+ fileName;
+      String UploapBPMNPath =  uploadDirectory +"\\"+ fileNameExt;
+      return UploapBPMNPath;
     }
+
+    /*
+    private void UpdateBPMNProcessId(String UploapBPMNPath)
+    {
+        //<bpmn:participant id="Participant_1ibi7ce" processRef="DisburseProcessWS" />
+        //</bpmn:collaboration>
+        //<bpmn:process id="DisburseProcessWS" isExecutable="true">
+       Document doc = mutantGeneratorBase.loadXMLFromFile(UploapBPMNPath);
+
+       NodeList nList = doc.getElementsByTagName(pSearchTagName);
+
+
+    }
+    */
 
     protected void CheckValidFileExtension(MultipartFile file) throws FileUploadException
     {

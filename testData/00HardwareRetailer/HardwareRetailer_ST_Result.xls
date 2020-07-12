@@ -1,0 +1,853 @@
+<?xml version="1.0"?>
+	<?mso-application progid="Excel.Sheet"?> 
+	<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" 
+	xmlns:o="urn:schemas-microsoft-com:office:office" 
+	xmlns:x="urn:schemas-microsoft-com:office:excel" 
+	xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" 
+	xmlns:html="http://www.w3.org/TR/REC-html40"> 
+	<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office"> 
+	<Version>12.00</Version> 
+	</DocumentProperties> 
+	<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel"> 
+	<WindowHeight>8130</WindowHeight> 
+	<WindowWidth>15135</WindowWidth> 
+	<WindowTopX>120</WindowTopX> 
+	<WindowTopY>45</WindowTopY> 
+	<ProtectStructure>False</ProtectStructure> 
+	<ProtectWindows>False</ProtectWindows> 
+	</ExcelWorkbook> 
+	<Styles>
+		<Style ss:ID="xls-style-1" ss:Name="xls-style-1">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#E8E8E8" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-2" ss:Name="xls-style-2">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+		</Style>
+	</Styles>
+	<Worksheet ss:Name="Sheet1">
+		<Table>
+			<Column ss:Width="250"/>
+			<Column ss:Width="100"/>
+			<Column ss:Width="280"/>
+			<Column ss:Width="280"/>
+			<Column ss:Width="100"/>
+			<Column ss:Width="500"/>
+			<Row>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Mutant Name</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">test Case</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Original Statement</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Mutant Statement</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Test Result</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Remark</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_EAR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price - VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_EAR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price - VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_EAR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price - VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [Goods,Price,VAT,Amount]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_EAR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price * VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Assign Carrier and prepare Paperwork</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_EAR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price * VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Assign Carrier and prepare Paperwork</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_EAR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price * VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [Goods,Price,VAT,Amount]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_EAR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price / VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_EAR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price / VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_EAR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price / VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [Goods,Price,VAT,Amount]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_EAR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price % VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_EAR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price % VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_EAR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price % VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [Goods,Price,VAT,Amount]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ELR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) || !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ELR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) || !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ELR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) || !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Assign Carrier and prepare Paperwork, but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance&lt;true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance&lt;true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance&lt;true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount != 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount != 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount != 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [Goods,Price,VAT,Amount]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance&lt;=true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance&lt;=true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance&lt;=true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance&gt;true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance&gt;true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance&gt;true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance&gt;=true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance&gt;=true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance&gt;=true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance!=true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance!=true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${IsRequiredExtraInsurance!=true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt; 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt; 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt; 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [Goods,Price,VAT,Amount]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &gt; 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Assign Carrier and prepare Paperwork</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &gt; 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Assign Carrier and prepare Paperwork</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &gt; 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [Goods,Price,VAT,Amount]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &gt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Assign Carrier and prepare Paperwork</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &gt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Assign Carrier and prepare Paperwork</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &gt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [Goods,Price,VAT,Amount]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount == 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Assign Carrier and prepare Paperwork</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount == 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Assign Carrier and prepare Paperwork</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ERR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount == 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [Goods,Price,VAT,Amount]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Destination &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task a528104e-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Goods_Price + Destination &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Destination&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Destination &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task a5d05e5b-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Goods_Price + Destination &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Destination&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Destination &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task a675ed48-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Goods_Price + Destination &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Destination&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Carrier_TrackingNumber + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b6873ced-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Carrier_TrackingNumber + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Carrier_TrackingNumber&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Carrier_TrackingNumber + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b729496a-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Carrier_TrackingNumber + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Carrier_TrackingNumber&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Carrier_TrackingNumber + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b7cae0b7-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Carrier_TrackingNumber + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Carrier_TrackingNumber&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_11</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Carrier_Provider + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b86c7704-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Carrier_Provider + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Carrier_Provider&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_11</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Carrier_Provider + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b90d7211-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Carrier_Provider + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Carrier_Provider&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_11</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Carrier_Provider + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b9b23dae-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Carrier_Provider + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Carrier_Provider&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_12</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Shipment_ID + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task ba5311ab-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Shipment_ID + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;ba5311a8-059a-11ea-a303-00090ffe0001&apos; to class java.math.BigDecimal</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_12</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Shipment_ID + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task baf9d918-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Shipment_ID + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;baf9d915-059a-11ea-a303-00090ffe0001&apos; to class java.math.BigDecimal</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_12</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Shipment_ID + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task bb9c81d5-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Shipment_ID + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;bb9c81d2-059a-11ea-a303-00090ffe0001&apos; to class java.math.BigDecimal</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_13</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Issuer + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task bc40d842-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Issuer + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;AAA&apos; to class java.math.BigDecimal</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_13</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Issuer + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task bce5079f-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Issuer + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;AAA&apos; to class java.math.BigDecimal</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_13</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Issuer + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task bd85b48c-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Issuer + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;ABC&apos; to class java.math.BigDecimal</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_14</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Category + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task be26ae99-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Category + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;electrical_supplies&apos; to class java.math.BigDecimal</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_14</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Category + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task bec75b86-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Category + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;building_materials&apos; to class java.math.BigDecimal</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_14</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Category + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task bf67e163-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Category + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;electrical_supplies&apos; to class java.math.BigDecimal</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_15</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Name + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task c00fba40-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Name + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;Computer&apos; to class java.math.BigDecimal</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_15</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Name + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task c0b0672d-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Name + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;electric drill&apos; to class java.math.BigDecimal</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_15</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Name + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task c154968a-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Name + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;Computer&apos; to class java.math.BigDecimal</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_16</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Source + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task c1f5b8a7-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Source + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Source&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_16</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Source + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task c2968ca4-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Source + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Source&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_16</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Source + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task c3373991-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Source + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Source&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Carrier_TrackingNumber &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task a71c8da5-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Goods_Price + Carrier_TrackingNumber &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Carrier_TrackingNumber&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Carrier_TrackingNumber &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task a7c2dee2-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Goods_Price + Carrier_TrackingNumber &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Carrier_TrackingNumber&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Carrier_TrackingNumber &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task a86b2cef-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Goods_Price + Carrier_TrackingNumber &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Carrier_TrackingNumber&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Carrier_Provider &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task a90e4adc-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Goods_Price + Carrier_Provider &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Carrier_Provider&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Carrier_Provider &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task a9b0cc89-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Goods_Price + Carrier_Provider &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Carrier_Provider&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Carrier_Provider &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task aa545fa6-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Goods_Price + Carrier_Provider &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Carrier_Provider&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Shipment_ID &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task aaf9a073-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Price + Shipment_ID &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;aaf9a070-059a-11ea-a303-00090ffe0001&apos; to class java.lang.Double</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Shipment_ID &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task abb5c4a0-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Price + Shipment_ID &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;abb59d8d-059a-11ea-a303-00090ffe0001&apos; to class java.lang.Double</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Shipment_ID &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task ac5a903d-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Price + Shipment_ID &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;ac5a692a-059a-11ea-a303-00090ffe0001&apos; to class java.lang.Double</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Goods_Issuer &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task acfdfc4a-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Price + Goods_Issuer &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;AAA&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Goods_Issuer &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task ada16757-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Price + Goods_Issuer &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;AAA&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Goods_Issuer &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task ae4373d4-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Price + Goods_Issuer &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;ABC&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Goods_Category &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task aee53231-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Price + Goods_Category &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;electrical_supplies&apos; to class java.lang.Double</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Goods_Category &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task af86c97e-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Price + Goods_Category &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;building_materials&apos; to class java.lang.Double</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Goods_Category &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b028fd0b-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Price + Goods_Category &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;electrical_supplies&apos; to class java.lang.Double</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Goods_Name &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b0cabb68-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Price + Goods_Name &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;Computer&apos; to class java.lang.Double</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Goods_Name &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b1737ea5-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Price + Goods_Name &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;electric drill&apos; to class java.lang.Double</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Goods_Name &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b214eee2-059a-11ea-a303-00090ffe0001: Error while evaluating expression: ${(Goods_Price + Goods_Name &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot coerce &apos;Computer&apos; to class java.lang.Double</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Source &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b2bb411f-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Goods_Price + Source &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Source&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Source &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b35d73ac-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Goods_Price + Source &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Source&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Source &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b3ff8029-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Goods_Price + Source &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Source&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Destination + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b4a2c526-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Destination + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Destination&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Destination + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b5443563-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Destination + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Destination&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_ITR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Destination + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task b5e5a5a0-059a-11ea-a303-00090ffe0001: Unknown property used in expression: ${(Destination + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}. Cause: Cannot resolve identifier &apos;Destination&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_IVR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Goods_Price &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_IVR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Goods_Price &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_IVR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + Goods_Price &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [Goods,Price,VAT,Amount]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_IVR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(VAT_Amount + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Take out extra insurance</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_IVR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(VAT_Amount + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Fill in post label , but Actual Result is Fill in post label </Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">HardwareRetailer_IVR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(VAT_Amount + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [Goods,Price,VAT,Amount]</Data></Cell>
+			</Row>
+		</Table>
+	</Worksheet>
+</Workbook>

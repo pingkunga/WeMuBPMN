@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -29,9 +30,11 @@ public class testResultHead {
     @Column(name = "mutanttestitemid")
     private int mutantTestItemId;
 
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @Column(name = "teststart")
     private Date testStart;
 
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @Column(name = "testfinish")
     private Date testFinish;
 

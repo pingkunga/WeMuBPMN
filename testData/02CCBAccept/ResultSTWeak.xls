@@ -1,0 +1,1541 @@
+<?xml version="1.0"?>
+	<?mso-application progid="Excel.Sheet"?> 
+	<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" 
+	xmlns:o="urn:schemas-microsoft-com:office:office" 
+	xmlns:x="urn:schemas-microsoft-com:office:excel" 
+	xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" 
+	xmlns:html="http://www.w3.org/TR/REC-html40"> 
+	<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office"> 
+	<Version>12.00</Version> 
+	</DocumentProperties> 
+	<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel"> 
+	<WindowHeight>8130</WindowHeight> 
+	<WindowWidth>15135</WindowWidth> 
+	<WindowTopX>120</WindowTopX> 
+	<WindowTopY>45</WindowTopY> 
+	<ProtectStructure>False</ProtectStructure> 
+	<ProtectWindows>False</ProtectWindows> 
+	</ExcelWorkbook> 
+	<Styles>
+		<Style ss:ID="xls-style-1" ss:Name="xls-style-1">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#E8E8E8" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-2" ss:Name="xls-style-2">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+		</Style>
+	</Styles>
+	<Worksheet ss:Name="Sheet1">
+		<Table>
+			<Column ss:Width="250"/>
+			<Column ss:Width="100"/>
+			<Column ss:Width="280"/>
+			<Column ss:Width="280"/>
+			<Column ss:Width="100"/>
+			<Column ss:Width="500"/>
+			<Row>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Mutant Name</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">test Case</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Original Statement</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Mutant Statement</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Test Result</Data></Cell>
+				<Cell ss:StyleID="xls-style-1"><Data ss:Type="String">Remark</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ALM_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) || (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ALM_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) || (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ALM_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) || (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ALM_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) || (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ALM_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) || (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &lt; RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &lt; RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &lt; RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &lt; RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &lt; RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() != nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is Evaluate Change Request</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() != nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() != nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() != nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Rejected, but Actual Result is Evaluate Change Request</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() != nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &lt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &lt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &lt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &lt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &lt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt; RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is Evaluate Change Request</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt; RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt; RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [evaluateResultMap,size]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt; RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Rejected, but Actual Result is Evaluate Change Request</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt; RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances == RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances == RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances == RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances == RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [evaluateResultMap,size]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances == RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances != RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances != RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances != RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances != RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances != RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &lt; nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is Evaluate Change Request</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &lt; nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [evaluateResultMap,size]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &lt; nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &lt; nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Rejected, but Actual Result is Evaluate Change Request</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &lt; nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &lt;= nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &lt;= nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &lt;= nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &lt;= nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &lt;= nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [evaluateResultMap,size]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &gt; nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is Evaluate Change Request</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &gt; nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &gt; nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [evaluateResultMap,size]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &gt; nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Rejected, but Actual Result is Evaluate Change Request</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &gt; nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &gt;= nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &gt;= nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &gt;= nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &gt;= nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ARM_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() &gt;= nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &lt; RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &lt; RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &lt; RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &lt; RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Rejected, but Actual Result is CCB Approved</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &lt; RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Rejected, but Actual Result is CCB Approved</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &lt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Result from Original and Mutant are same</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &lt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [NumOfApprove]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &lt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Result from Original and Mutant are same</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &lt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Rejected, but Actual Result is CCB Approved</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &lt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Rejected, but Actual Result is CCB Approved</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt; RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt; RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt; RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt; RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [NumOfApprove]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt; RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [NumOfApprove]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove == RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [NumOfApprove]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove == RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [NumOfApprove]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove == RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [NumOfApprove]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove == RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">ENGINE Varaible not equal with expression variable [NumOfApprove]</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove == RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Result from Original and Mutant are same</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove != RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove != RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove != RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove != RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Rejected, but Actual Result is CCB Approved</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ERR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove != RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Rejected, but Actual Result is CCB Approved</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact3}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 28c0385b-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact3}. Cause: Cannot coerce &apos;Recheck Module BOT Report and PTI Report&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact3}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 29724ac9-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact3}. Cause: Cannot coerce &apos;Recheck Module BOT Report and PTI Report&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact3}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 2a1e8fd5-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact3}. Cause: Cannot coerce &apos;Recheck Module BOT Report and PTI Report&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact3}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 2accaa96-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact3}. Cause: Cannot coerce &apos;Recheck Module BOT Report and PTI Report&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact3}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 2b759444-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact3}. Cause: Cannot coerce &apos;Recheck Module BOT Report and PTI Report&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact2) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 474ea42e-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact2) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;a good opportunity for migrate VB6 to .NET&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact2) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 47f51cc4-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact2) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;a good opportunity for migrate VB6 to .NET&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact2) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 4899e8aa-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact2) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;a good opportunity for migrate VB6 to .NET&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact2) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 493f4fd0-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact2) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;a good opportunity for migrate VB6 to .NET&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact2) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 49e52d26-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact2) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;a good opportunity for migrate VB6 to .NET&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_11</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RedmineId) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 4a8f774c-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= RedmineId) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;#246092&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_11</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RedmineId) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 4b35a1c2-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= RedmineId) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;#246092&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_11</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RedmineId) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 4bdeda78-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= RedmineId) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;#246092&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_11</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RedmineId) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 4c82bafe-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= RedmineId) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;#246092&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_11</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RedmineId) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 4d27adf4-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= RedmineId) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;#246092&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_12</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact1) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 4dd37eba-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact1) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Check Extend DB field&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_12</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact1) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 4e782290-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact1) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Check Extend DB field&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_12</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact1) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 4f1e26f6-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact1) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Check Extend DB field&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_12</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact1) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 4fc514bc-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact1) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Check Extend DB field&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_12</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact1) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 506c9fc2-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact1) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Check Extend DB field&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_13</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= reviewResult) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 5121e668-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${(nrOfCompletedInstances &gt;= reviewResult) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot resolve identifier &apos;reviewResult&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_13</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= reviewResult) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 51c6632e-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${(nrOfCompletedInstances &gt;= reviewResult) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot resolve identifier &apos;reviewResult&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_13</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= reviewResult) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 526d2ae4-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${(nrOfCompletedInstances &gt;= reviewResult) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot resolve identifier &apos;reviewResult&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_13</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= reviewResult) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 53148dda-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${(nrOfCompletedInstances &gt;= reviewResult) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot resolve identifier &apos;reviewResult&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_13</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= reviewResult) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 53bb0770-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${(nrOfCompletedInstances &gt;= reviewResult) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot resolve identifier &apos;reviewResult&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_14</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= reviewer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 54729806-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${(nrOfCompletedInstances &gt;= reviewer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot resolve identifier &apos;reviewer&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_14</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= reviewer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 5519acdc-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${(nrOfCompletedInstances &gt;= reviewer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot resolve identifier &apos;reviewer&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_14</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= reviewer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 55bc55e2-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${(nrOfCompletedInstances &gt;= reviewer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot resolve identifier &apos;reviewer&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_14</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= reviewer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 56628058-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${(nrOfCompletedInstances &gt;= reviewer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot resolve identifier &apos;reviewer&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_14</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= reviewer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 5707e87e-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${(nrOfCompletedInstances &gt;= reviewer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot resolve identifier &apos;reviewer&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_15</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Subject) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 57b4f1c4-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Subject) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Extend Field paid-up share on Master File Equity (Old 13 digit/ New 15 Digit)&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_15</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Subject) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 5859959a-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Subject) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Extend Field paid-up share on Master File Equity (Old 13 digit/ New 15 Digit)&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_15</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Subject) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 58fe1360-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Subject) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Extend Field paid-up share on Master File Equity (Old 13 digit/ New 15 Digit)&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_15</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Subject) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 59a5c476-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Subject) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Extend Field paid-up share on Master File Equity (Old 13 digit/ New 15 Digit)&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_15</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Subject) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 5a4c16fc-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Subject) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Extend Field paid-up share on Master File Equity (Old 13 digit/ New 15 Digit)&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact2}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 2c289105-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact2}. Cause: Cannot coerce &apos;a good opportunity for migrate VB6 to .NET&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact2}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 2cd1f0e3-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact2}. Cause: Cannot coerce &apos;a good opportunity for migrate VB6 to .NET&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact2}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 2d7dc0bf-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact2}. Cause: Cannot coerce &apos;a good opportunity for migrate VB6 to .NET&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact2}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 2e2f8500-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact2}. Cause: Cannot coerce &apos;a good opportunity for migrate VB6 to .NET&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact2}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 2edc182e-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact2}. Cause: Cannot coerce &apos;a good opportunity for migrate VB6 to .NET&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RedmineId}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 2f97a06f-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= RedmineId}. Cause: Cannot coerce &apos;#246092&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RedmineId}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 30571f5d-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= RedmineId}. Cause: Cannot coerce &apos;#246092&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RedmineId}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 310a6a49-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= RedmineId}. Cause: Cannot coerce &apos;#246092&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RedmineId}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 31b7e7ca-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= RedmineId}. Cause: Cannot coerce &apos;#246092&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RedmineId}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 325ed6a8-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= RedmineId}. Cause: Cannot coerce &apos;#246092&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact1}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 331db949-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact1}. Cause: Cannot coerce &apos;Check Extend DB field&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact1}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 33c6a3f7-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact1}. Cause: Cannot coerce &apos;Check Extend DB field&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact1}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 347029e3-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact1}. Cause: Cannot coerce &apos;Check Extend DB field&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact1}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 351e1d94-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact1}. Cause: Cannot coerce &apos;Check Extend DB field&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Impact1}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 35c7a382-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Impact1}. Cause: Cannot coerce &apos;Check Extend DB field&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= reviewResult}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 367e49c3-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= reviewResult}. Cause: Cannot resolve identifier &apos;reviewResult&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= reviewResult}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 3725fbf1-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= reviewResult}. Cause: Cannot resolve identifier &apos;reviewResult&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= reviewResult}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 37d8a99d-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= reviewResult}. Cause: Cannot resolve identifier &apos;reviewResult&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= reviewResult}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 3880a8de-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= reviewResult}. Cause: Cannot resolve identifier &apos;reviewResult&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= reviewResult}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 3928f74c-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= reviewResult}. Cause: Cannot resolve identifier &apos;reviewResult&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= IncidentStatus}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 39f39abd-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= IncidentStatus}. Cause: Cannot resolve identifier &apos;IncidentStatus&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= IncidentStatus}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 3a9aafab-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= IncidentStatus}. Cause: Cannot resolve identifier &apos;IncidentStatus&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= IncidentStatus}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 3b463267-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= IncidentStatus}. Cause: Cannot resolve identifier &apos;IncidentStatus&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= IncidentStatus}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 3bf42518-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= IncidentStatus}. Cause: Cannot resolve identifier &apos;IncidentStatus&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= IncidentStatus}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 3c98f116-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= IncidentStatus}. Cause: Cannot resolve identifier &apos;IncidentStatus&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= reviewer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 3d46e3c7-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= reviewer}. Cause: Cannot resolve identifier &apos;reviewer&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= reviewer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 3df043a5-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= reviewer}. Cause: Cannot resolve identifier &apos;reviewer&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= reviewer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 3e992d51-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= reviewer}. Cause: Cannot resolve identifier &apos;reviewer&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= reviewer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 3f439e92-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= reviewer}. Cause: Cannot resolve identifier &apos;reviewer&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= reviewer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 3feab380-00e8-11ea-894a-00090ffe0001: Unknown property used in expression: ${NumOfApprove &gt;= reviewer}. Cause: Cannot resolve identifier &apos;reviewer&apos;</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Subject}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 40a614b1-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Subject}. Cause: Cannot coerce &apos;Extend Field paid-up share on Master File Equity (Old 13 digit/ New 15 Digit)&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Subject}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 41516f5f-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Subject}. Cause: Cannot coerce &apos;Extend Field paid-up share on Master File Equity (Old 13 digit/ New 15 Digit)&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Subject}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 41fd192b-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Subject}. Cause: Cannot coerce &apos;Extend Field paid-up share on Master File Equity (Old 13 digit/ New 15 Digit)&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Subject}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 42a677fc-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Subject}. Cause: Cannot coerce &apos;Extend Field paid-up share on Master File Equity (Old 13 digit/ New 15 Digit)&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Subject}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 434eed7a-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${NumOfApprove &gt;= Subject}. Cause: Cannot coerce &apos;Extend Field paid-up share on Master File Equity (Old 13 digit/ New 15 Digit)&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact3) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 43ff0400-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact3) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Recheck Module BOT Report and PTI Report&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact3) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 44a55586-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact3) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Recheck Module BOT Report and PTI Report&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact3) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 4549370c-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact3) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Recheck Module BOT Report and PTI Report&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact3) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 45f10f32-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact3) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Recheck Module BOT Report and PTI Report&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_ITR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Impact3) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Cannot complete task 46973aa8-00e8-11ea-894a-00090ffe0001: Error while evaluating expression: ${(nrOfCompletedInstances &gt;= Impact3) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}. Cause: Cannot coerce &apos;Recheck Module BOT Report and PTI Report&apos; to class java.lang.Long</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredMinNumofPeer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Result from Original and Mutant are same</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredMinNumofPeer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Result from Original and Mutant are same</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredMinNumofPeer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredMinNumofPeer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Result from Original and Mutant are same</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredMinNumofPeer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Result from Original and Mutant are same</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfPeers}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfPeers}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Result from Original and Mutant are same</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfPeers}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfPeers}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Result from Original and Mutant are same</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfPeers}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Result from Original and Mutant are same</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Manday}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Manday}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Manday}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Manday}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Result from Original and Mutant are same</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= RequiredNumOfApproval}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${NumOfApprove &gt;= Manday}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Result from Original and Mutant are same</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredNumOfApproval) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredNumOfApproval) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredNumOfApproval) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredNumOfApproval) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredNumOfApproval) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is Evaluate Change Request, but Actual Result is CCB Rejected</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredNumOfPeers) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is Evaluate Change Request</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredNumOfPeers) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredNumOfPeers) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredNumOfPeers) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Rejected, but Actual Result is Evaluate Change Request</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredNumOfPeers) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC01</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Manday) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Approved, but Actual Result is Evaluate Change Request</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC02</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Manday) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC03</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Manday) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC04</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Manday) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">KILLED</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Expected Result is CCB Rejected, but Actual Result is Evaluate Change Request</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">CCBApproveProcess_IVR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">TC05</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= RequiredMinNumofPeer) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">${(nrOfCompletedInstances &gt;= Manday) &amp;&amp; (evaluateResultMap.size() == nrOfInstances)}</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">LIVE</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String"></Data></Cell>
+			</Row>
+		</Table>
+	</Worksheet>
+</Workbook>

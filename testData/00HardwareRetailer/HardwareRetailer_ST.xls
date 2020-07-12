@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+	<?mso-application progid="Excel.Sheet"?> 
+	<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" 
+	xmlns:o="urn:schemas-microsoft-com:office:office" 
+	xmlns:x="urn:schemas-microsoft-com:office:excel" 
+	xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" 
+	xmlns:html="http://www.w3.org/TR/REC-html40"> 
+	<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office"> 
+	<Version>12.00</Version> 
+	</DocumentProperties> 
+	<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel"> 
+	<WindowHeight>8130</WindowHeight> 
+	<WindowWidth>15135</WindowWidth> 
+	<WindowTopX>120</WindowTopX> 
+	<WindowTopY>45</WindowTopY> 
+	<ProtectStructure>False</ProtectStructure> 
+	<ProtectWindows>False</ProtectWindows> 
+	</ExcelWorkbook> 
+	<Styles>
+		<Style ss:ID="xls-style-1" ss:Name="xls-style-1">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Center"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#333333" />
+			<Interior ss:Color="#ffffff" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-2" ss:Name="xls-style-2">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#333333" />
+			<Interior ss:Color="#ffffff" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-3" ss:Name="xls-style-3">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#333333" />
+			<Interior ss:Color="#ffffff" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-4" ss:Name="xls-style-4">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#333333" />
+			<Interior ss:Color="#ffffff" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-5" ss:Name="xls-style-5">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Center"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-6" ss:Name="xls-style-6">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-7" ss:Name="xls-style-7">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-8" ss:Name="xls-style-8">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-9" ss:Name="xls-style-9">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-10" ss:Name="xls-style-10">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Center"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="xls-style-11" ss:Name="xls-style-11">
+			<Alignment ss:Vertical="Bottom" ss:Horizontal="Left"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#CCCCCC"/>
+			</Borders>
+			<Font ss:Color="#000000" />
+			<Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+		</Style>
+	</Styles>
+	<Worksheet ss:Name="Sheet1">
+		<Table>
+			<Column ss:Width="25"/>
+			<Column ss:Width="25"/>
+			<Column ss:Width="70"/>
+			<Column ss:Width="250"/>
+			<Column ss:Width="400"/>
+			<Column ss:Width="400"/>
+			<Row>
+				<Cell ss:MergeAcross="2" ss:StyleID="xls-style-1"><Data ss:Type="String">Operator</Data></Cell>
+				<Cell ss:StyleID="xls-style-2"><Data ss:Type="String">Mutant Id</Data></Cell>
+				<Cell ss:StyleID="xls-style-3"><Data ss:Type="String">Original</Data></Cell>
+				<Cell ss:StyleID="xls-style-4"><Data ss:Type="String">Mutant</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">-</Data></Cell>
+				<Cell ss:MergeAcross="1" ss:StyleID="xls-style-6"><Data ss:Type="String">IVR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">IVR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_IVR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + Goods_Price &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">IVR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_IVR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(VAT_Amount + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">-</Data></Cell>
+				<Cell ss:MergeAcross="1" ss:StyleID="xls-style-6"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + Destination &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + Carrier_TrackingNumber &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + Carrier_Provider &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + Shipment_ID &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + Goods_Issuer &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + Goods_Category &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + Goods_Name &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + Source &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Destination + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Carrier_TrackingNumber + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_11</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Carrier_Provider + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_12</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Shipment_ID + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_13</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Issuer + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_14</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Category + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_15</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Name + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ITR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ITR_16</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Source + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">-</Data></Cell>
+				<Cell ss:MergeAcross="1" ss:StyleID="xls-style-6"><Data ss:Type="String">EAR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">EAR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_EAR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price - VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">EAR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_EAR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price * VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">EAR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_EAR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price / VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">EAR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_EAR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price % VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">-</Data></Cell>
+				<Cell ss:MergeAcross="1" ss:StyleID="xls-style-6"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ERR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${IsRequiredExtraInsurance&lt;true}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ERR_2</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${IsRequiredExtraInsurance&lt;=true}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ERR_3</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${IsRequiredExtraInsurance&gt;true}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ERR_4</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${IsRequiredExtraInsurance&gt;=true}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ERR_5</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${IsRequiredExtraInsurance==true}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${IsRequiredExtraInsurance!=true}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ERR_6</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt; 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ERR_7</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + VAT_Amount &gt; 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ERR_8</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + VAT_Amount &gt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ERR_9</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + VAT_Amount == 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ERR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ERR_10</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + VAT_Amount != 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String">-</Data></Cell>
+				<Cell ss:MergeAcross="1" ss:StyleID="xls-style-6"><Data ss:Type="String">ELR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String"></Data></Cell>
+			</Row>
+			<Row>
+				<Cell ss:StyleID="xls-style-5"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-10"><Data ss:Type="String"></Data></Cell>
+				<Cell ss:StyleID="xls-style-11"><Data ss:Type="String">ELR</Data></Cell>
+				<Cell ss:StyleID="xls-style-7"><Data ss:Type="String">HardwareRetailer_ELR_1</Data></Cell>
+				<Cell ss:StyleID="xls-style-8"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) &amp;&amp; !isSpecialIssuer}</Data></Cell>
+				<Cell ss:StyleID="xls-style-9"><Data ss:Type="String">${(Goods_Price + VAT_Amount &lt;= 10000) || !isSpecialIssuer}</Data></Cell>
+			</Row>
+		</Table>
+	</Worksheet>
+</Workbook>

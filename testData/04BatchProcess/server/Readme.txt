@@ -1,4 +1,4 @@
-1.cd to path D:\BPMN\99Web\WuMuBPMN\testData\04BatchProcess
+1.cd to path D:\BPMN\99Web\WuMuBPMN\testData\04BatchProcess\server
 2.json-server --watch db.json
 
 Reference: https://naiwaen.debuggingsoft.com/tag/json-server/
@@ -13,3 +13,11 @@ String readFileString(String filePath) {
     String fileContent = file.text
     return fileContent
 }
+
+
+  "tmp": [
+    {
+      "counta": 1,
+      "id": 1
+    }
+  ]

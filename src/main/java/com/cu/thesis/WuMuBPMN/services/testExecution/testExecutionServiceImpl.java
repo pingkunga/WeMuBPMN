@@ -535,7 +535,7 @@ public class testExecutionServiceImpl implements testExecutionService {
                 else
                 {
                     pTestResultEntry.setResult(GLOBAL_CONST.RESULT_KILLED);
-                    pTestResultEntry.setRemark("Mutant was killed by this test case");
+                    //pTestResultEntry.setRemark("Mutant was killed by this test case");
                 }
             } catch (ScriptException scriptEx) {
                 pTestResultEntry.setResult(GLOBAL_CONST.RESULT_KILLED);
